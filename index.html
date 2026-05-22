@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synthetic Life Trajectories — TRANSP-OR / EPFL</title>
+<meta name="description" content="Microsimulation bayésienne de trajectoires de vie individuelles en Suisse. Projet de semestre, TRANSP-OR, EPFL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Newsreader:ital,opsz@0,6..72;1,6..72&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is my first website.</p>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark">EPFL</span>
+      <span class="brand-divider"></span>
+      <span class="brand-lab">TRANSP-OR</span>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Navigation principale">
+      <button class="tab is-active" data-tab="presentation">01 — Présentation</button>
+      <button class="tab" data-tab="methodologie">02 — Méthodologie</button>
+      <button class="tab" data-tab="resultats">03 — Résultats</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Projet de semestre · Synthetic panel data</p>
+    <h1 class="hero-title">Trajectoires de vie<br><em>synthétiques</em> en Suisse</h1>
+  </div>
+  <div class="hero-bg" aria-hidden="true"></div>
+</section>
+
+<main class="wrap">
+
+<!-- ============================================================
+     ONGLET 1 : PRÉSENTATION  —  zone de contenu vide.
+     Tout votre contenu va entre les commentaires ci-dessous.
+     ============================================================ -->
+<section class="panel is-active" id="presentation">
+  <!-- ===== DÉBUT CONTENU PRÉSENTATION ===== -->
+
+  <!-- ===== FIN CONTENU PRÉSENTATION ===== -->
+</section>
+
+<!-- ============================================================
+     ONGLET 2 : MÉTHODOLOGIE  —  zone de contenu vide.
+     ============================================================ -->
+<section class="panel" id="methodologie">
+  <!-- ===== DÉBUT CONTENU MÉTHODOLOGIE ===== -->
+
+  <!-- ===== FIN CONTENU MÉTHODOLOGIE ===== -->
+</section>
+
+<!-- ============================================================
+     ONGLET 3 : RÉSULTATS  —  galerie PNG + tableaux depuis CSV
+     ============================================================ -->
+<section class="panel" id="resultats">
+
+  <!-- ---------- Plots PNG ---------- -->
+  <h2 class="section-title">Plots de validation</h2>
+  <div class="results-banner">
+    <p><strong>Plots.</strong> Déposez vos exports dans un dossier <code>img/</code> puis renseignez le <code>src</code> de chaque <code>&lt;img&gt;</code>. Tant qu'une image manque, un cadre gris affiche le nom de fichier attendu.</p>
+  </div>
+  <div class="gallery">
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_01.png"><figcaption>[Légende plot 1]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_02.png"><figcaption>[Légende plot 2]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_03.png"><figcaption>[Légende plot 3]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_04.png"><figcaption>[Légende plot 4]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_05.png"><figcaption>[Légende plot 5]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_06.png"><figcaption>[Légende plot 6]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_07.png"><figcaption>[Légende plot 7]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_08.png"><figcaption>[Légende plot 8]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_09.png"><figcaption>[Légende plot 9]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_10.png"><figcaption>[Légende plot 10]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_11.png"><figcaption>[Légende plot 11]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_12.png"><figcaption>[Légende plot 12]</figcaption></figure>
+    <figure class="plot"><img src="" alt="" data-ph="img/plot_13.png"><figcaption>[Légende plot 13]</figcaption></figure>
+  </div>
+
+  <!-- ---------- Tableaux depuis CSV ---------- -->
+  <h2 class="section-title">Tableaux de données</h2>
+  <div class="results-banner">
+    <p><strong>CSV.</strong> Deux façons d'alimenter les tableaux : (1) déposez vos fichiers dans un dossier <code>data/</code> et listez-les dans <code>app.js</code> (constante <code>CSV_FILES</code>) — chargés automatiquement une fois le site en ligne ; ou (2) cliquez sur <em>Charger un CSV</em> ci-dessous pour l'afficher immédiatement (marche aussi en local). Le séparateur (<code>,</code> <code>;</code> ou tabulation) est détecté automatiquement.</p>
+  </div>
+
+  <div class="csv-controls">
+    <label class="btn-upload">
+      Charger un CSV…
+      <input type="file" id="csvInput" accept=".csv,.tsv,text/csv" multiple hidden>
+    </label>
+    <span class="csv-hint">Les colonnes s'affichent dans l'ordre du fichier. Vous réagencerez ensuite.</span>
+  </div>
+
+  <!-- Les tableaux générés (auto depuis data/ + uploads manuels) viennent ici -->
+  <div id="csvTables"></div>
+
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Synthetic Life Trajectories · Projet de semestre · Transport and Mobility Laboratory (TRANSP-OR), EPFL</p>
+    <p class="footer-meta">Hébergé sur GitHub Pages</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
