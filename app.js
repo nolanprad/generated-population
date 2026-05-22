@@ -1,55 +1,79 @@
 /* ============================================================
-   app.js — navigation par onglets + galerie PNG + chargeur CSV
+   app.js — chargement des onglets (fragments) + nav + galerie + CSV
    ============================================================ */
 
 /* ------------------------------------------------------------
-   CONFIG — fichiers CSV chargés automatiquement depuis data/
-   Ajoutez vos fichiers ici (ils doivent être dans le dossier data/).
-   Laissez la liste vide si vous préférez tout charger via le bouton.
+   CONFIG — CSV chargé automatiquement depuis data/ (site en ligne).
+   Pour l'instant un seul fichier. Changez le chemin/titre si besoin.
    ------------------------------------------------------------ */
 const CSV_FILES = [
-  // { file: "data/cantons.csv",  title: "Distribution cantonale" },
-  // { file: "data/params.csv",   title: "Paramètres du modèle" },
+  { file: "data/results.csv", title: "Résultats" },
 ];
 
-/* ---------- Navigation par onglets ---------- */
-const tabs = document.querySelectorAll('.tab');
-const panels = document.querySelectorAll('.panel');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
-    tabs.forEach(t => t.classList.toggle('is-active', t === tab));
-    panels.forEach(p => p.classList.toggle('is-active', p.id === target));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-
-/* ---------- Emplacements de plots vides ---------- */
-document.querySelectorAll('.gallery img').forEach(img => {
-  const showPlaceholder = () => {
-    img.classList.add('missing');
-    const fig = img.closest('figure');
-    if (fig && !fig.querySelector('.ph-label')) {
-      const label = document.createElement('span');
-      label.className = 'ph-label';
-      label.textContent = img.dataset.ph || 'img/…';
-      img.insertAdjacentElement('afterend', label);
+/* ============================================================
+   1) CHARGEMENT DES FRAGMENTS D'ONGLETS
+   Chaque <section data-src="tabs/x.html"> reçoit son contenu.
+   On attend que tout soit injecté avant d'initialiser le reste.
+   ============================================================ */
+async function loadTabs() {
+  const sections = document.querySelectorAll('.panel[data-src]');
+  await Promise.all([...sections].map(async (sec) => {
+    try {
+      const res = await fetch(sec.dataset.src);
+      if (!res.ok) throw new Error(res.status);
+      sec.innerHTML = await res.text();
+    } catch (e) {
+      sec.innerHTML = `<div class="results-banner"><p><strong>Onglet non chargé.</strong> Impossible de charger <code>${sec.dataset.src}</code>. En local, ouvrez le site via un serveur (<code>python3 -m http.server</code>) plutôt qu'en double-clic.</p></div>`;
+      console.warn(`Fragment non chargé : ${sec.dataset.src}`, e);
     }
-  };
-  if (!img.getAttribute('src')) showPlaceholder();
-  img.addEventListener('error', showPlaceholder);
-  img.addEventListener('load', () => {
-    if (img.getAttribute('src')) {
-      img.classList.remove('missing');
-      const lbl = img.closest('figure')?.querySelector('.ph-label');
-      if (lbl) lbl.remove();
-    }
-  });
-});
+  }));
+}
 
 /* ============================================================
-   PARSEUR CSV — détection auto du séparateur, support guillemets
+   2) NAVIGATION PAR ONGLETS
+   ============================================================ */
+function initTabs() {
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.toggle('is-active', t === tab));
+      panels.forEach(p => p.classList.toggle('is-active', p.id === target));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+}
+
+/* ============================================================
+   3) GALERIE PNG — emplacements vides
+   ============================================================ */
+function initGallery() {
+  document.querySelectorAll('.gallery img').forEach(img => {
+    const showPlaceholder = () => {
+      img.classList.add('missing');
+      const fig = img.closest('figure');
+      if (fig && !fig.querySelector('.ph-label')) {
+        const label = document.createElement('span');
+        label.className = 'ph-label';
+        label.textContent = img.dataset.ph || 'img/…';
+        img.insertAdjacentElement('afterend', label);
+      }
+    };
+    if (!img.getAttribute('src')) showPlaceholder();
+    img.addEventListener('error', showPlaceholder);
+    img.addEventListener('load', () => {
+      if (img.getAttribute('src')) {
+        img.classList.remove('missing');
+        const lbl = img.closest('figure')?.querySelector('.ph-label');
+        if (lbl) lbl.remove();
+      }
+    });
+  });
+}
+
+/* ============================================================
+   4) CSV — parseur (séparateur auto), rendu, chargement, upload
    ============================================================ */
 function detectDelimiter(sample) {
   const firstLine = sample.split(/\r?\n/)[0] || '';
@@ -59,12 +83,11 @@ function detectDelimiter(sample) {
     if (ch === '"') inQuotes = !inQuotes;
     else if (!inQuotes && ch in counts) counts[ch]++;
   }
-  // séparateur le plus fréquent hors guillemets
   return Object.keys(counts).reduce((a, b) => counts[b] > counts[a] ? b : a, ',');
 }
 
 function parseCSV(text) {
-  text = text.replace(/^\uFEFF/, '');           // retire le BOM éventuel
+  text = text.replace(/^\uFEFF/, '');
   const delim = detectDelimiter(text);
   const rows = [];
   let row = [], field = '', inQuotes = false;
@@ -78,19 +101,18 @@ function parseCSV(text) {
       if (c === '"') inQuotes = true;
       else if (c === delim) { row.push(field); field = ''; }
       else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
-      else if (c === '\r') { /* ignore, géré par \n */ }
+      else if (c === '\r') { /* géré par \n */ }
       else field += c;
     }
   }
   if (field.length || row.length) { row.push(field); rows.push(row); }
-  // retire d'éventuelles lignes totalement vides
   return rows.filter(r => r.some(cell => cell.trim() !== ''));
 }
 
-/* ---------- Rendu d'un tableau ---------- */
 function renderTable(rows, title) {
   if (!rows.length) return;
   const container = document.getElementById('csvTables');
+  if (!container) return;
 
   const block = document.createElement('div');
   block.className = 'csv-block';
@@ -135,7 +157,24 @@ function renderTable(rows, title) {
   container.appendChild(block);
 }
 
-/* ---------- Chargement auto depuis data/ ---------- */
+function updateEmptyHint() {
+  const container = document.getElementById('csvTables');
+  if (!container) return;
+  const hasTable = container.querySelector('.csv-block');
+  let hint = document.getElementById('csvEmptyHint');
+  if (!hasTable) {
+    if (!hint) {
+      hint = document.createElement('p');
+      hint.id = 'csvEmptyHint';
+      hint.className = 'csv-empty';
+      hint.textContent = "Aucun tableau chargé pour l'instant. Déposez votre CSV dans data/results.csv (en ligne) ou utilisez le bouton « Charger un CSV… » ci-dessus.";
+      container.appendChild(hint);
+    }
+  } else if (hint) {
+    hint.remove();
+  }
+}
+
 async function loadConfiguredCSVs() {
   for (const { file, title } of CSV_FILES) {
     try {
@@ -144,22 +183,34 @@ async function loadConfiguredCSVs() {
       const text = await res.text();
       renderTable(parseCSV(text), title || file.split('/').pop());
     } catch (e) {
-      // silencieux en local (file://) ; visible si le fichier est listé mais absent en ligne
       console.warn(`CSV non chargé : ${file}`, e);
     }
   }
+  updateEmptyHint();
 }
 
-/* ---------- Upload manuel ---------- */
-document.getElementById('csvInput')?.addEventListener('change', (ev) => {
-  const files = Array.from(ev.target.files || []);
-  files.forEach(f => {
-    const reader = new FileReader();
-    reader.onload = () => renderTable(parseCSV(reader.result), f.name);
-    reader.readAsText(f);
-  });
-  ev.target.value = ''; // permet de recharger le même fichier
-});
+function initCSV() {
+  const input = document.getElementById('csvInput');
+  if (input) {
+    input.addEventListener('change', (ev) => {
+      const files = Array.from(ev.target.files || []);
+      files.forEach(f => {
+        const reader = new FileReader();
+        reader.onload = () => { renderTable(parseCSV(reader.result), f.name); updateEmptyHint(); };
+        reader.readAsText(f);
+      });
+      ev.target.value = '';
+    });
+  }
+  loadConfiguredCSVs();
+}
 
-/* lance le chargement auto au démarrage */
-loadConfiguredCSVs();
+/* ============================================================
+   DÉMARRAGE — l'ordre compte : fragments d'abord, puis le reste
+   ============================================================ */
+(async function start() {
+  await loadTabs();   // injecte le contenu des onglets
+  initTabs();         // nav
+  initGallery();      // emplacements PNG
+  initCSV();          // tableaux CSV
+})();

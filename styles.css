@@ -261,6 +261,11 @@ code{ font-family:var(--mono); font-size:.85em; background:var(--paper-2); paddi
   font-family:var(--serif-disp); font-weight:600; font-size:1.15rem;
   margin:0 0 12px;
 }
+.csv-empty{
+  font-size:.92rem; color:var(--ink-faint); font-style:italic;
+  padding:18px 20px; background:var(--paper-2);
+  border:1px dashed var(--line-strong); border-radius:12px; margin:0;
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width:840px){

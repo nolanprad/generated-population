@@ -37,72 +37,15 @@
   <div class="hero-bg" aria-hidden="true"></div>
 </section>
 
+<!-- ============================================================
+     CONTENU DES ONGLETS — injecté depuis le dossier tabs/
+     Chaque <section> reçoit le fragment correspondant.
+     Pour éditer un onglet : ouvrez le fichier tabs/<nom>.html
+     ============================================================ -->
 <main class="wrap">
-
-<!-- ============================================================
-     ONGLET 1 : PRÉSENTATION  —  zone de contenu vide.
-     Tout votre contenu va entre les commentaires ci-dessous.
-     ============================================================ -->
-<section class="panel is-active" id="presentation">
-  <!-- ===== DÉBUT CONTENU PRÉSENTATION ===== -->
-
-  <!-- ===== FIN CONTENU PRÉSENTATION ===== -->
-</section>
-
-<!-- ============================================================
-     ONGLET 2 : MÉTHODOLOGIE  —  zone de contenu vide.
-     ============================================================ -->
-<section class="panel" id="methodologie">
-  <!-- ===== DÉBUT CONTENU MÉTHODOLOGIE ===== -->
-
-  <!-- ===== FIN CONTENU MÉTHODOLOGIE ===== -->
-</section>
-
-<!-- ============================================================
-     ONGLET 3 : RÉSULTATS  —  galerie PNG + tableaux depuis CSV
-     ============================================================ -->
-<section class="panel" id="resultats">
-
-  <!-- ---------- Plots PNG ---------- -->
-  <h2 class="section-title">Plots de validation</h2>
-  <div class="results-banner">
-    <p><strong>Plots.</strong> Déposez vos exports dans un dossier <code>img/</code> puis renseignez le <code>src</code> de chaque <code>&lt;img&gt;</code>. Tant qu'une image manque, un cadre gris affiche le nom de fichier attendu.</p>
-  </div>
-  <div class="gallery">
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_01.png"><figcaption>[Légende plot 1]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_02.png"><figcaption>[Légende plot 2]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_03.png"><figcaption>[Légende plot 3]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_04.png"><figcaption>[Légende plot 4]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_05.png"><figcaption>[Légende plot 5]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_06.png"><figcaption>[Légende plot 6]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_07.png"><figcaption>[Légende plot 7]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_08.png"><figcaption>[Légende plot 8]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_09.png"><figcaption>[Légende plot 9]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_10.png"><figcaption>[Légende plot 10]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_11.png"><figcaption>[Légende plot 11]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_12.png"><figcaption>[Légende plot 12]</figcaption></figure>
-    <figure class="plot"><img src="" alt="" data-ph="img/plot_13.png"><figcaption>[Légende plot 13]</figcaption></figure>
-  </div>
-
-  <!-- ---------- Tableaux depuis CSV ---------- -->
-  <h2 class="section-title">Tableaux de données</h2>
-  <div class="results-banner">
-    <p><strong>CSV.</strong> Deux façons d'alimenter les tableaux : (1) déposez vos fichiers dans un dossier <code>data/</code> et listez-les dans <code>app.js</code> (constante <code>CSV_FILES</code>) — chargés automatiquement une fois le site en ligne ; ou (2) cliquez sur <em>Charger un CSV</em> ci-dessous pour l'afficher immédiatement (marche aussi en local). Le séparateur (<code>,</code> <code>;</code> ou tabulation) est détecté automatiquement.</p>
-  </div>
-
-  <div class="csv-controls">
-    <label class="btn-upload">
-      Charger un CSV…
-      <input type="file" id="csvInput" accept=".csv,.tsv,text/csv" multiple hidden>
-    </label>
-    <span class="csv-hint">Les colonnes s'affichent dans l'ordre du fichier. Vous réagencerez ensuite.</span>
-  </div>
-
-  <!-- Les tableaux générés (auto depuis data/ + uploads manuels) viennent ici -->
-  <div id="csvTables"></div>
-
-</section>
-
+  <section class="panel is-active" id="presentation" data-src="tabs/presentation.html"></section>
+  <section class="panel"            id="methodologie" data-src="tabs/methodologie.html"></section>
+  <section class="panel"            id="resultats"    data-src="tabs/resultats.html"></section>
 </main>
 
 <!-- ============ FOOTER ============ -->

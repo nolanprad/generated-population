@@ -1,0 +1,39 @@
+<!-- ============================================================
+     ONGLET 03 — RÉSULTATS
+     Galerie de plots PNG + tableau(x) depuis CSV.
+     ============================================================ -->
+
+<!-- ---------- Plots PNG ---------- -->
+<h2 class="section-title">Plots de validation</h2>
+<div class="results-banner">
+  <p><strong>Plots.</strong> Déposez vos exports dans le dossier <code>img/</code> puis renseignez le <code>src</code> de chaque <code>&lt;img&gt;</code>. Tant qu'une image manque, un cadre gris affiche le nom de fichier attendu.</p>
+</div>
+<div class="gallery">
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_01.png"><figcaption>[Légende plot 1]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_02.png"><figcaption>[Légende plot 2]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_03.png"><figcaption>[Légende plot 3]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_04.png"><figcaption>[Légende plot 4]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_05.png"><figcaption>[Légende plot 5]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_06.png"><figcaption>[Légende plot 6]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_07.png"><figcaption>[Légende plot 7]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_08.png"><figcaption>[Légende plot 8]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_09.png"><figcaption>[Légende plot 9]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_10.png"><figcaption>[Légende plot 10]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_11.png"><figcaption>[Légende plot 11]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_12.png"><figcaption>[Légende plot 12]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/plot_13.png"><figcaption>[Légende plot 13]</figcaption></figure>
+</div>
+
+<!-- ---------- Tableau depuis CSV ---------- -->
+<h2 class="section-title">Tableau de données</h2>
+<div class="results-banner">
+  <p><strong>CSV.</strong> Déposez votre fichier dans <code>data/results.csv</code> (chargé automatiquement en ligne) ou utilisez le bouton <em>Charger un CSV…</em> ci-dessous (marche aussi en local). Séparateur virgule.</p>
+</div>
+<div class="csv-controls">
+  <label class="btn-upload">
+    Charger un CSV…
+    <input type="file" id="csvInput" accept=".csv,.tsv,text/csv" multiple hidden>
+  </label>
+  <span class="csv-hint">Les colonnes s'affichent dans l'ordre du fichier. Vous réagencerez ensuite.</span>
+</div>
+<div id="csvTables"></div>
