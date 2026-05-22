@@ -4,14 +4,19 @@ Site statique — TRANSP-OR, EPFL.
 Trois onglets : **Présentation**, **Méthodologie**, **Résultats**.
 https://nolanprad.github.io/generated-population/
 
-## Fichiers
+## Structure 
 
-| Fichier | Rôle |
-|---|---|
-| `index.html` | Structure des 3 onglets |
-| `styles.css` | Mise en forme |
-| `app.js` | Navigation + galerie PNG + chargeur CSV |
-
+```
+index.html          squelette : header, nav, footer
+styles.css          mise en forme
+app.js              navigation + chargement des onglets + galerie + CSV
+tabs/
+  presentation.html  <- contenu onglet 01  
+  methodologie.html  <- contenu onglet 02 
+  resultats.html     <- contenu onglet 03 
+img/                 plots PNG
+data/                CSV (results.csv)
+```
 ## Remplir le contenu
 
 ### Présentation & Méthodologie
