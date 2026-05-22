@@ -1,11 +1,199 @@
 <!-- ============================================================
-     ONGLET 01 — PRÉSENTATION
-     Éditez librement ce fichier. Tout ce qui est ici s'affiche
-     dans le premier onglet. Classes stylées dispo si besoin :
-     .section-title  .prose  .card / .cards  .callout
-     .checklist  .lead-card
+     TAB 01 — PRESENTATION
+     Two-layer layout: public summary at top, technical details below
      ============================================================ -->
 
-<!-- ===== DÉBUT CONTENU PRÉSENTATION ===== -->
+<!-- ===== GENERAL SUMMARY (public-facing) ===== -->
 
-<!-- ===== FIN CONTENU PRÉSENTATION ===== -->
+<h2 class="section-title" style="margin-top:0">What this project is about</h2>
+
+<div class="lead-grid">
+  <div>
+    <p class="prose" style="font-size:1.12rem; color:var(--ink); margin-bottom:20px;">
+      Every day, millions of people in Switzerland travel to work, change jobs, move to a new city, or start a family. Understanding how those individual life decisions unfold over time is the foundation of transport planning — yet the data needed to study them are rarely available.
+    </p>
+    <p class="prose">
+      This project builds a framework that <strong>generates entire synthetic lives</strong>: fictional but statistically realistic individuals whose birth, education, career, housing choices, and mobility habits are simulated from the ground up. Because the individuals are artificial, they can be observed at any point in time — and they carry no real personal information.
+    </p>
+    <p class="prose">
+      The result is a tool that transport researchers can use to model long-horizon travel demand without waiting for rare longitudinal surveys, navigating privacy restrictions, or stitching together incomplete records.
+    </p>
+  </div>
+
+  <div>
+    <div class="lead-card">
+      <h3>Project at a glance</h3>
+      <dl class="facts">
+        <dt>Institution</dt>
+        <dd>Transport and Mobility Laboratory (TRANSP-OR), EPFL</dd>
+        <dt>Type</dt>
+        <dd>Semester project — synthetic panel data</dd>
+        <dt>Geographic scope</dt>
+        <dd>Switzerland · 26 cantons</dd>
+        <dt>Dimensions modelled</dt>
+        <dd>Existence · Education · Work · Residence · Driving Licence</dd>
+        <dt>Empirical grounding</dt>
+        <dd>Swiss Federal Statistical Office (FSO/OFS)</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- Three key ideas -->
+<h2 class="section-title">Three problems, one solution</h2>
+
+<div class="cards">
+  <div class="card">
+    <span class="card-num">01</span>
+    <h3>Privacy</h3>
+    <p>Linking real residence, employment, and income data at the individual level raises serious legal and ethical barriers. Synthetic individuals carry no personal information — they can be freely shared and studied.</p>
+  </div>
+  <div class="card">
+    <span class="card-num">02</span>
+    <h3>Temporal gaps</h3>
+    <p>Survey panels are collected years apart. The job change, the move, the period of inactivity that happens in between — all unobserved. A generated individual exposes its full trajectory by construction, at any calendar year.</p>
+  </div>
+  <div class="card">
+    <span class="card-num">03</span>
+    <h3>Longitudinal linkage</h3>
+    <p>Following the same person across registers and over a lifetime is operationally hard. Here, the entire life history is generated in one coherent pass — consistent, complete, and infinitely reproducible.</p>
+  </div>
+</div>
+
+<!-- What a synthetic life looks like -->
+<h2 class="section-title">A life in five chapters</h2>
+
+<p class="prose" style="margin-bottom:28px;">Each synthetic individual is described by five <em>dimensions</em> — modular building blocks that together reconstruct a coherent life story. Two complementary semester projects cover them all.</p>
+
+<div class="flow">
+  <div class="flow-step">
+    <span class="flow-k">E</span>
+    <h4>Existence</h4>
+    <p>Birth, sex, lifespan. The temporal skeleton every other dimension is anchored to.</p>
+  </div>
+  <span class="flow-arrow" aria-hidden="true">→</span>
+  <div class="flow-step">
+    <span class="flow-k">Ed</span>
+    <h4>Education</h4>
+    <p>Pathway through the Swiss school system: compulsory, vocational, baccalaureate, or tertiary.</p>
+  </div>
+  <span class="flow-arrow" aria-hidden="true">→</span>
+  <div class="flow-step">
+    <span class="flow-k">W</span>
+    <h4>Work</h4>
+    <p>Employment spells, income, place of work — canton by canton across the career.</p>
+  </div>
+  <span class="flow-arrow" aria-hidden="true">→</span>
+  <div class="flow-step">
+    <span class="flow-k">R</span>
+    <h4>Residence</h4>
+    <p>Where the person lives, and when they move — tied to job changes and life stage.</p>
+  </div>
+  <span class="flow-arrow" aria-hidden="true">→</span>
+  <div class="flow-step">
+    <span class="flow-k">DL</span>
+    <h4>Driving Licence</h4>
+    <p>Whether and when a licence is obtained — a key behavioural variable for mode choice.</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top:32px;">
+  <p>The key insight: because all five dimensions are generated together for the <strong>same individual</strong>, any cross-sectional observation — "where does this person live and work in 2018?" — can be reconstructed as a simple projection of a richer underlying life-course record.</p>
+</div>
+
+
+<!-- ===== TECHNICAL DETAILS ===== -->
+
+<h2 class="section-title" style="margin-top:60px; padding-top:12px; border-top:2px solid var(--line);">
+  Technical foundations
+</h2>
+<p class="prose-sm" style="margin-bottom:36px;">The following sections are aimed at researchers and students familiar with microsimulation and transport modelling.</p>
+
+<!-- Methodological architecture -->
+<h3 style="font-family:var(--serif-disp); font-weight:600; font-size:1.25rem; margin:0 0 16px;">Methodological architecture</h3>
+
+<div class="two-col" style="margin-bottom:32px;">
+  <div>
+    <h3>Time-independent generation</h3>
+    <p>Following Kukic, Ilinov &amp; Bierlaire [1], individual characteristics are generated once as <em>universal time-independent variables</em> and subsequently mapped to time-dependent panel observations for any year of interest. This separates the simulation of the underlying life history from the observation model — enabling the same synthetic person to appear in multiple survey waves without resampling.</p>
+  </div>
+  <div>
+    <h3>Event-based framework</h3>
+    <p>Baud [2] formalises individual generation as a set of trajectories organised into dimensions, events, durations, and attributes. Each event is subject to temporal, biological, legal, and inter-dimension constraints — e.g. work cannot begin before education ends; residence moves are conditioned on the new place of work. This structure ensures internal coherence across the full life course.</p>
+  </div>
+</div>
+
+<!-- Refinements by dimension -->
+<h3 style="font-family:var(--serif-disp); font-weight:600; font-size:1.25rem; margin:0 0 16px;">Empirical refinements to the baseline model</h3>
+<p class="prose-sm" style="margin-bottom:20px;">The baseline specification carried several deliberate simplifications. Both reports propose targeted refinements grounded in Swiss FSO/OFS data.</p>
+
+<div class="dim">
+  <div class="dim-title">
+    Existence &amp; Driving Licence
+    <span class="dim-tag">Report 2</span>
+  </div>
+  <p>Sex-specific mortality tables (FSO life expectancy data) replace a single-population lifespan distribution. Driving licence acquisition is calibrated against the Swiss Microcensus on Mobility and Transport, capturing cohort and age effects that a simple Bernoulli draw cannot reproduce.</p>
+</div>
+
+<div class="dim">
+  <div class="dim-title">
+    Education
+    <span class="dim-tag">Report 2</span>
+  </div>
+  <p>The Swiss education system is modelled at a fine institutional level: compulsory schooling, vocational education and training (VET/CFC), baccalaureate schools (<em>gymnase</em>), specialised schools, and tertiary pathways. Completion probabilities and transition rates are drawn from official FSO statistics [7–13].</p>
+  <div class="formula">
+    <span class="formula-label">Initial residence at end of education phase</span>
+    P(canton<sub>0</sub> ≠ birth canton) = f(tertiary enrolment, FSO origin-destination data [10])
+  </div>
+</div>
+
+<div class="dim">
+  <div class="dim-title">
+    Work
+    <span class="dim-tag">Report 1</span>
+  </div>
+  <p>Labour-market entry is modelled with education-attainment-specific delays, replacing the single Gaussian used in the baseline. Employment spell durations follow an age-dependent schedule recalibrated from the U.S. NLSY [3] with Swiss corrections. Income is estimated via a Mincer-type wage equation [4] with separate education returns for secondary and tertiary graduates, consistent with the FSO Earnings Structure Survey [8].</p>
+  <div class="formula">
+    <span class="formula-label">Mincer wage equation (refined)</span>
+    ln(w) = α + β<sub>educ</sub> · educ + β<sub>exp</sub> · exp + β<sub>exp²</sub> · exp² + ε
+  </div>
+  <p style="font-size:.88rem; color:var(--ink-faint); margin-top:6px;">β<sub>educ</sub> now takes distinct values for secondary and tertiary education, rather than a single return.</p>
+</div>
+
+<div class="dim">
+  <div class="dim-title">
+    Residence
+    <span class="dim-tag">Report 1</span>
+  </div>
+  <p>The constant move probability <em>p<sub>h</sub> = 0.95</em> of the baseline is replaced by a career-stage-dependent schedule, following Lerch's [6] finding that residential mobility decreases monotonically over the life course. The binary urban/rural boost applied to four cantons is replaced by a continuous population-density gradient across all 26 cantons, derived from FSO cantonal statistics [9].</p>
+  <div class="formula">
+    <span class="formula-label">Residence-move probability</span>
+    P(move | age, career stage, Δ-canton density) = σ( γ<sub>0</sub> + γ<sub>age</sub> · age + γ<sub>density</sub> · Δρ )
+  </div>
+</div>
+
+<!-- Validation -->
+<h3 style="font-family:var(--serif-disp); font-weight:600; font-size:1.25rem; margin:36px 0 16px;">Validation strategy</h3>
+<p class="prose" style="margin-bottom:16px;">Both reports evaluate the refined models by comparing projected cantonal and employment distributions against FSO/OFS cross-sections for the Swiss population. The criterion: do simulated individuals, projected onto a given observation year, reproduce the macro-statistics reported by the FSO?</p>
+
+<ul class="checklist">
+  <li>Cantonal employment shares vs. FSO cantonal employment statistics</li>
+  <li>Inter-cantonal migration flows vs. Lerch [6] and FSO mobility statistics [7]</li>
+  <li>Income distribution by education level vs. FSO Earnings Structure Survey [8]</li>
+  <li>Driving licence ownership by age and sex vs. Swiss Microcensus [5, 6]</li>
+  <li>Educational attainment distribution vs. FSO upper-secondary completion rates [7–13]</li>
+</ul>
+
+<!-- References -->
+<h3 style="font-family:var(--serif-disp); font-weight:600; font-size:1.15rem; margin:36px 0 10px;">Key references</h3>
+<div class="results-banner">
+  <p>
+    [1] Kukic, Ilinov &amp; Bierlaire — Universal time-independent variables &amp; synthetic panel framework ·
+    [2] Baud — Event-based formalisation of individual life trajectories ·
+    [3] U.S. National Longitudinal Survey of Youth (NLSY) ·
+    [4] Mincer (1974) — Schooling, Experience, and Earnings ·
+    [5] Lacroix et al. — Urban classification for transport modelling ·
+    [6] Lerch (2020) — Inter-cantonal migration in Switzerland 1966–2018 ·
+    [7–13] Swiss Federal Statistical Office (FSO/OFS) — Education, mobility, earnings, and cantonal statistics
+  </p>
+</div>
