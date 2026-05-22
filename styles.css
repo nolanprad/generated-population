@@ -108,6 +108,8 @@ main{ padding:56px 28px 80px; }
 p{ margin:0 0 16px; }
 strong{ color:var(--ink); font-weight:600; }
 em{ color:var(--ink); }
+a{ color:var(--epfl); text-decoration:none; border-bottom:1px solid var(--epfl-soft); transition:border-color .2s; }
+a:hover{ border-bottom-color:var(--epfl); }
 
 /* ---------- Lead grid (presentation) ---------- */
 .lead-grid{ display:grid; grid-template-columns:1.7fr 1fr; gap:40px; align-items:start; }
@@ -157,7 +159,7 @@ em{ color:var(--ink); }
 /* ---------- Flow (methodology / presentation) ---------- */
 .flow{
   display:grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap:18px;
   margin:24px 0 8px;
   align-items:stretch;
@@ -314,6 +316,21 @@ code{ font-family:var(--mono); font-size:.85em; background:var(--paper-2); paddi
   padding:18px 20px; background:var(--paper-2);
   border:1px dashed var(--line-strong); border-radius:12px; margin:0;
 }
+
+/* ---------- Compare table (framework -> this work) ---------- */
+.compare{ width:100%; border-collapse:collapse; margin:14px 0 4px; font-size:.95rem; }
+.compare th{
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase;
+  text-align:left; padding:10px 16px; color:var(--ink-faint);
+  border-bottom:1px solid var(--line-strong);
+}
+.compare th.col-base{ color:var(--ink-faint); }
+.compare th.col-new{ color:var(--epfl); }
+.compare td{ padding:12px 16px; border-bottom:1px solid var(--line); vertical-align:top; width:50%; }
+.compare tr:last-child td{ border-bottom:none; }
+.compare .c-base{ color:var(--ink-faint); }
+.compare .c-new{ color:var(--ink); }
+.compare .c-new strong{ color:var(--epfl); }
 
 /* ---------- Responsive ---------- */
 @media (max-width:840px){

@@ -9,6 +9,11 @@
 <!-- ===== START METHODOLOGY CONTENT ===== -->
 
 <h2 class="section-title">Framework</h2>
+<div class="callout">
+  <p><strong>Built on an open framework.</strong> This project extends the
+  <a href="https://github.com/candicebaud/longitudinal_synthetic_population" target="_blank" rel="noopener">Longitudinal Synthetic Population Framework</a>
+  developed at EPFL, an open, reusable codebase that represents individuals as life-course trajectories of events. Our work reuses this framework and refines several of its trajectories with Swiss-specific data.</p>
+</div>
 <p class="prose">The objective of the framework is to generate synthetic individuals together with coherent life histories. Rather than generating isolated observations at a single calendar year, the model describes the successive events experienced by an individual over their lifetime. Each individual is represented through a set of <strong>trajectories</strong>—Existence, Education, Driving Licence, Work, Residence—where each trajectory describes one aspect of life.</p>
 <p class="prose">Within each trajectory, we draw <strong>events</strong> that may or may not occur. For every event that <em>does</em> occur, we then generate its <strong>gap</strong> and <strong>duration</strong>, followed by any other <strong>attributes</strong> (such as sex, place of residence, or education title), each sampled according to laws taken from scientific and official sources. Events that do not occur carry no duration or attributes. A trajectory is therefore the ordered sequence of realised events, each with its timing and attributes.</p>
 
@@ -47,67 +52,101 @@
 </div>
 
 <h2 class="section-title">Trajectory specifications</h2>
+<p class="prose">Each trajectory below is summarised by what the original baseline did and what the refined model changes. The refinements are calibrated on Swiss official statistics (FSO/OFS) and the demographic literature.</p>
 
 <!-- ---------- 1. Existence ---------- -->
 <div class="dim">
   <h3 class="dim-title">Existence <span class="dim-tag">01</span></h3>
-  <p>In the baseline, the Birth event is described by a date of birth drawn uniformly and a lifespan drawn from a Weibull distribution truncated at 110 years. The Weibull is used because it provides a flexible, right-skewed survival distribution concentrated around realistic lifespans.</p>
-  <p>The extended model attaches a <strong>sex attribute</strong> to the Birth event, because mortality differs systematically between men and women in Switzerland. Lifespan is then drawn conditionally on sex, with parameters calibrated so that women's expected lifespan exceeds men's, while keeping the truncation at 110 years.</p>
-  <div class="formula">
-    <span class="formula-label">Extended Existence</span>
-    s<sub>Ex</sub>(B) ~ Uniform[1920−w, 2050] &nbsp;·&nbsp; a<sup>sex</sup>(B) ~ Bernoulli(p<sub>f</sub> = 0.5)<br>
-    d<sub>Ex</sub>(B) | sex = s ~ Weibull(k<sub>s</sub>, λ<sub>s</sub>) on (0, 110]
-  </div>
+  <p>Sets the date of birth and the lifespan, which together bound every other event. Lifespan is drawn from a Weibull distribution—a flexible, right-skewed shape concentrated around realistic ages.</p>
+  <table class="compare">
+    <thead><tr><th class="col-base">In the framework</th><th class="col-new">This work adds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="c-base">Lifespan drawn from one Weibull distribution, capped at 110 years.</td>
+        <td class="c-new">A <strong>sex attribute</strong> is added at birth, and lifespan depends on it—women live longer on average, reproducing the observed Swiss mortality gap.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- ---------- 2. Education ---------- -->
 <div class="dim">
   <h3 class="dim-title">Education <span class="dim-tag">02</span></h3>
-  <p>The Education trajectory is modelled as a <strong>hierarchical sequence</strong> of events rather than a direct assignment of a final level. Mandatory schooling is deterministic and compulsory: it starts at age 4 and lasts 11 years, so individuals complete it around age 15.</p>
-  <p>After mandatory education, individuals enter one of three mutually exclusive outcomes—<strong>professional</strong> secondary education (PSE, leading to a CFC), <strong>academic</strong> secondary education (ASE, a specialised-school or baccalaureate diploma), or <strong>none</strong>. The proportions reflect the dominant role of vocational training in Switzerland.</p>
-  <div class="formula">
-    <span class="formula-label">Secondary pathway · tertiary access</span>
-    SE | mandatory ~ Categorical(P<sub>PSE</sub>=0.67, P<sub>ASE</sub>=0.23, P<sub>None</sub>=0.10)<br>
-    i<sub>TE</sub> | SE = ASE ~ Bernoulli(0.90)
-  </div>
-  <p class="prose-sm">Tertiary access is restricted to the academic pathway, reflecting the institutional constraint that universities generally require an academic qualification. Tertiary students are then assigned an institution type (UNI/EPF vs HES/HEP) and a degree level (Bachelor vs Master), with nominal durations of 3 years (Bachelor) and 5 years cumulative (Master), allowed to vary within bounded intervals. A highest-diploma attribute is exported for use by other trajectories.</p>
+  <p>Describes the schooling history: compulsory education (deterministic, 11 years from age 4), then an upper-secondary path, and possibly tertiary studies.</p>
+  <table class="compare">
+    <thead><tr><th class="col-base">In the framework</th><th class="col-new">This work adds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="c-base">A compact representation that assigns a final education level.</td>
+        <td class="c-new">A <strong>hierarchical sequence</strong> matching the Swiss system: a vocational vs academic secondary split, tertiary reachable only from the academic track, and institution type (university vs applied) plus degree level (Bachelor vs Master).</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- ---------- 3. Driving Licence ---------- -->
 <div class="dim">
   <h3 class="dim-title">Driving Licence <span class="dim-tag">03</span></h3>
-  <p>The trajectory describes the transition between two states, "no driving licence" and "driving licence". Every individual starts without a licence; once obtained, ownership is assumed <strong>irreversible</strong>. In the baseline, the acquisition probability is constant for everyone surviving past the legal age of 18, and the acquisition age follows a truncated log-normal concentrated shortly after that age.</p>
-  <p>The extended model introduces two refinements. First, the probability of obtaining a licence depends on <strong>sex</strong> and on <strong>tertiary-education participation</strong>—the latter capturing delayed or less frequent acquisition among students. Second, the acquisition age is allowed to differ by sex.</p>
-  <div class="formula">
-    <span class="formula-label">Heterogeneous acquisition</span>
-    P(i<sub>DL</sub> = 1 | sex = s, TE = u) = p<sub>s</sub> · ψ<sub>u</sub><br>
-    p<sub>female</sub> = 0.78, &nbsp; p<sub>male</sub> = 0.86 &nbsp;·&nbsp; ψ<sub>0</sub> = 1, &nbsp; ψ<sub>1</sub> = 0.90
-  </div>
-  <p class="prose-sm">Conditional on acquisition, the age follows a sex-specific truncated log-normal on [18, min(70, lifespan)], slightly later and more dispersed for women, consistent with observed Swiss mobility statistics.</p>
+  <p>Describes whether and when an individual obtains a driving licence, assumed irreversible once acquired. Acquisition is concentrated shortly after the legal age of 18.</p>
+  <table class="compare">
+    <thead><tr><th class="col-base">In the framework</th><th class="col-new">This work adds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="c-base">One acquisition probability applied past age 18.</td>
+        <td class="c-new">Acquisition now depends on <strong>sex</strong> and on <strong>tertiary participation</strong> (students acquire it later or less often), and the acquisition age also varies by sex.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- ---------- 4. Work ---------- -->
 <div class="dim">
   <h3 class="dim-title">Work <span class="dim-tag">04</span></h3>
-  <p>The Work trajectory is a sequence of employment spells separated by gaps, fitting within an active window that ends at age 70 or at death. Labour-market entry age is conditioned on education; each spell duration is drawn from an age-dependent truncated exponential, capped by an explicit residual-budget bound so the career never overruns the active window; income follows a Mincer equation with separate returns to secondary and tertiary education.</p>
-  <div class="formula">
-    <span class="formula-label">Entry · spell duration · income</span>
-    a<sub>entry</sub> ~ N(μ(SE,TE), 1.5²), &nbsp; μ ∈ {16.5, 18.0, 23.0}<br>
-    d<sub>Wk</sub> ~ Exp(mean = d̄(a<sub>k</sub>)) on [0, U<sub>k</sub>], &nbsp; d̄ ∈ {1.5, 2.5, 3.5, 4.5, 9.0}<br>
-    ln(inc<sub>k</sub>) ~ N(β₀ + β₁·work + β₂·work² + ρ<sub>SE</sub>·SE + ρ<sub>TE</sub>·TE, σ²)
-  </div>
-  <p class="prose-sm">The place of work uses a four-class density-based multiplier δ(c) ∈ {2.0, 1.5, 1.2, 1.0}; inter-canton mobility follows a decreasing schedule X(k) from 30% to 5% by spell rank, with M<sub>k</sub> ~ Bernoulli(X(k)).</p>
+  <p>A sequence of employment spells separated by gaps, fitting within an active window that ends at age 70 or at death. Each spell carries an income.</p>
+  <table class="compare">
+    <thead><tr><th class="col-base">In the framework</th><th class="col-new">This work adds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="c-base">A common average entry age.</td>
+        <td class="c-new"><strong>Entry age conditioned on education</strong> (earlier for vocational, later for university).</td>
+      </tr>
+      <tr>
+        <td class="c-base">Spell and gap durations drawn from their own distributions.</td>
+        <td class="c-new"><strong>Explicit budget bounds</strong> so a career never overruns age 70 or the lifespan.</td>
+      </tr>
+      <tr>
+        <td class="c-base">A Mincer income equation with one education return.</td>
+        <td class="c-new"><strong>Separate returns</strong> for secondary and tertiary education, matching the wage gap in Swiss earnings data.</td>
+      </tr>
+      <tr>
+        <td class="c-base">A binary urban boost on the main urban cantons.</td>
+        <td class="c-new">A <strong>four-class urban multiplier</strong> based on cantonal density, so mid-density cantons also attract workers.</td>
+      </tr>
+      <tr>
+        <td class="c-base">A constant job-mobility rate between spells.</td>
+        <td class="c-new">A <strong>decreasing mobility schedule</strong> (from 30% down to 5%), since people move less as their career advances.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- ---------- 5. Residence ---------- -->
 <div class="dim">
   <h3 class="dim-title">Residence <span class="dim-tag">05</span></h3>
-  <p>Residence spells are aligned to work spells. The birth canton is drawn proportional to cantonal population. A single relocation opportunity at tertiary entry can move students to the canton of their institution. During employment, the home canton follows the work canton through the same mobility indicator M<sub>k</sub> drawn in the Work trajectory, with an alignment probability conditioned on the geographical relationship between the new workplace and the previous home.</p>
-  <div class="formula">
-    <span class="formula-label">Birth canton · geography-aware alignment</span>
-    P(c<sup>B</sup> = c) = N<sub>c</sub> / ΣN<sub>c'</sub><br>
-    P(home<sub>k</sub> = work<sub>k</sub> | M<sub>k</sub>=1, k≥2) = 0.50 if neighbouring, &nbsp; 0.90 otherwise
-  </div>
+  <p>Tracks where the individual lives, with residence spells aligned to work spells. The birth canton is drawn proportional to cantonal population.</p>
+  <table class="compare">
+    <thead><tr><th class="col-base">In the framework</th><th class="col-new">This work adds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="c-base">Residence after education stays in the birth canton.</td>
+        <td class="c-new">A <strong>relocation at tertiary entry</strong> can move students to the canton of their institution.</td>
+      </tr>
+      <tr>
+        <td class="c-base">Home follows the work canton with a fixed probability.</td>
+        <td class="c-new">The home follows the new workplace with a <strong>probability that depends on geography</strong>—lower when the new job is in a neighbouring canton (commuting plausible), higher when it is far (relocation more likely).</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <h2 class="section-title">Production runs</h2>
