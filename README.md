@@ -1,7 +1,8 @@
 # Synthetic Life Trajectories — site de présentation
 
-Site statique (HTML/CSS/JS pur, aucun build) — TRANSP-OR, EPFL.
+Site statique — TRANSP-OR, EPFL.
 Trois onglets : **Présentation**, **Méthodologie**, **Résultats**.
+https://nolanprad.github.io/generated-population/
 
 ## Fichiers
 
@@ -37,10 +38,3 @@ guillemets et le BOM sont gérés. Les colonnes s'affichent dans l'ordre du fich
 > Note : le chargement auto via `data/` échoue si vous ouvrez `index.html` en
 > `file://` (restriction CORS). Utilisez le bouton manuel en local, ou lancez
 > un petit serveur : `python3 -m http.server 8000`.
-
-## Déployer sur GitHub Pages
-
-1. Poussez les fichiers à la racine du dépôt.
-2. **Settings → Pages** → Source **Deploy from a branch** → branche **main**,
-   dossier **/ (root)** → **Save**.
-3. Publié à `https://<utilisateur>.github.io/<dépôt>/`.
