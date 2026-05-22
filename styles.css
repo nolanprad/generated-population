@@ -80,6 +80,33 @@ body{
   letter-spacing:-.02em; margin:0 0 24px; max-width:14ch;
 }
 .hero-title em{ font-style:italic; font-weight:400; color:var(--epfl); }
+.hero-credits{
+  margin:26px 0 0;
+  padding-left:2px;
+  font-family:var(--mono);
+  font-size:.76rem;
+  letter-spacing:.08em;
+  color:var(--ink-faint);
+}
+
+.hero-credits p{
+  margin:0 0 7px;
+}
+
+.hero-credits span[aria-hidden="true"]{
+  color:var(--epfl);
+  margin:0 8px;
+}
+
+.credit-label{
+  display:inline-block;
+  min-width:92px;
+  margin-right:14px;
+  color:var(--ink);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.68rem;
+}
 .hero-sub{ font-size:1.18rem; max-width:56ch; color:var(--ink-soft); margin:0; }
 .hero-bg{
   position:absolute; inset:0; pointer-events:none; z-index:-1;
