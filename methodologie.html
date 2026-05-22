@@ -1,0 +1,116 @@
+<!-- ============================================================
+     TAB 02 — METHODOLOGY
+     Framework + Existence / Driving Licence / Education follow
+     Nolan's reviewed report closely. Work / Residence follow the
+     Work & Residence report. Edit freely.
+     Styled classes: .section-title .prose .prose-sm .flow .two-col
+                     .dim .dim-title .dim-tag .formula .callout
+     ============================================================ -->
+
+<!-- ===== START METHODOLOGY CONTENT ===== -->
+
+<h2 class="section-title">Framework</h2>
+<p class="prose">The objective of the framework is to generate synthetic individuals together with coherent life trajectories. Rather than generating isolated observations at a single calendar year, the model describes the successive events experienced by an individual over their lifetime. Each individual is represented through a set of <strong>dimensions</strong>—Existence, Education, Driving Licence, Work, Residence—and each dimension is composed of <strong>events</strong>. For example, the Existence dimension contains the Birth event, the Education dimension contains the educational stages, and the Driving Licence dimension contains the transition from "no licence" to "licence".</p>
+<p class="prose">Each event is characterised by temporal information—mainly a starting date and a duration—and may also carry attributes such as sex, place of residence, or education title. This structure makes it possible to describe not only whether an event occurs, but also when it occurs and how long it lasts. A <strong>trajectory</strong> is the ordered sequence of events that occur within one dimension.</p>
+
+<div class="callout">
+  <p><strong>The Existence dimension has a special role:</strong> it defines the temporal support of the individual. The Birth event determines both the date of birth and the lifespan, and all other events must occur within this lifetime—an individual cannot enter tertiary education or obtain a driving licence after death. In this sense, Existence constrains every other dimension.</p>
+</div>
+
+<h2 class="section-title">Constraints</h2>
+<p class="prose">The framework imposes several types of constraints to keep generated trajectories coherent. <strong>Structural</strong> constraints ensure that events occur in a valid order and cover the relevant part of the lifespan. <strong>Biological and legal</strong> constraints prevent unrealistic trajectories, such as obtaining a driving licence before the legal age. <strong>Interdependence</strong> constraints allow events from different dimensions to depend on one another.</p>
+<p class="prose">A core architectural constraint is that probabilistic laws may only condition on time-independent universal variables already drawn earlier in the chain; conditioning directly on calendar time <em>t</em> is forbidden.</p>
+
+<h2 class="section-title">Generation in three steps</h2>
+<p class="prose">The generation procedure separates three steps. This separation makes the model flexible, because new dimensions or attributes can be added without changing the whole structure.</p>
+
+<div class="flow">
+  <div class="flow-step"><span class="flow-k">1</span><h4>Existence</h4><p>Sampled first, since it determines the individual's lifetime and bounds every other event.</p></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><span class="flow-k">2</span><h4>Event occurrence</h4><p>The model samples which events occur in each dimension.</p></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><span class="flow-k">3</span><h4>Durations &amp; attributes</h4><p>The durations and attributes associated with the realised events are sampled.</p></div>
+</div>
+
+<p class="prose">An important feature is the distinction between time-independent and time-dependent representations. The generated individual is first described by time-independent variables—date of birth, lifespan, education trajectory, licence acquisition age. These define a complete life history. The individual can then be observed at any calendar year by projecting this life history into a time-dependent dataset: the same individual can be seen in 2000, 2010, or 2020, with age, education status, and licence status reconstructed from the underlying trajectory.</p>
+
+<h2 class="section-title">Sampling mechanics</h2>
+<div class="two-col">
+  <div>
+    <h3>Convex Hit-and-Run</h3>
+    <p>Birth date and lifespan are drawn using a Convex Metropolis–Hastings step that uses Hit-and-Run proposals on the convex polytope defined by the temporal constraints. Hit-and-Run produces uniform local moves whose proposal density cancels out in the acceptance ratio.</p>
+  </div>
+  <div>
+    <h3>Warm-up &amp; burn-in</h3>
+    <p>Two stabilisation mechanisms are used. The birth-date support can be extended backward by a <strong>warm-up</strong> period to avoid boundary effects in the first projected years. The Metropolis–Hastings sampler also uses a <strong>burn-in</strong> phase: the initial iterations are discarded before samples are retained. Neither is used to selectively adjust the reported results.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Dimension specifications</h2>
+
+<!-- ---------- 1. Existence ---------- -->
+<div class="dim">
+  <h3 class="dim-title">Existence <span class="dim-tag">01</span></h3>
+  <p>In the baseline, the Birth event is described by a date of birth drawn uniformly and a lifespan drawn from a Weibull distribution truncated at 110 years. The Weibull is used because it provides a flexible, right-skewed survival distribution concentrated around realistic lifespans.</p>
+  <p>The extended model attaches a <strong>sex attribute</strong> to the Birth event, because mortality differs systematically between men and women in Switzerland. Lifespan is then modelled conditionally on sex, with parameters calibrated so that women's expected lifespan exceeds men's, while keeping the truncation at 110 years.</p>
+  <div class="formula">
+    <span class="formula-label">Extended Existence</span>
+    s<sub>Ex</sub>(B) ~ Uniform[1920−w, 2050] &nbsp;·&nbsp; a<sup>sex</sup>(B) ~ Bernoulli(p<sub>f</sub> = 0.5)<br>
+    d<sub>Ex</sub>(B) | sex = s ~ Weibull(k<sub>s</sub>, λ<sub>s</sub>) on (0, 110]
+  </div>
+</div>
+
+<!-- ---------- 2. Education ---------- -->
+<div class="dim">
+  <h3 class="dim-title">Education <span class="dim-tag">02</span></h3>
+  <p>The Education dimension is modelled as a <strong>hierarchical sequence</strong> rather than a direct assignment of a final level. Mandatory schooling is deterministic and compulsory: it starts at age 4 and lasts 11 years, so individuals complete it around age 15.</p>
+  <p>After mandatory education, individuals enter one of three mutually exclusive outcomes—<strong>professional</strong> secondary education (PSE, leading to a CFC), <strong>academic</strong> secondary education (ASE, a specialised-school or baccalaureate diploma), or <strong>none</strong>. The proportions reflect the dominant role of vocational training in Switzerland.</p>
+  <div class="formula">
+    <span class="formula-label">Secondary pathway · tertiary access</span>
+    SE | mandatory ~ Categorical(P<sub>PSE</sub>=0.67, P<sub>ASE</sub>=0.23, P<sub>None</sub>=0.10)<br>
+    i<sub>TE</sub> | SE = ASE ~ Bernoulli(0.90)
+  </div>
+  <p class="prose-sm">Tertiary access is restricted to the academic pathway, reflecting the institutional constraint that universities generally require an academic qualification. Tertiary students are then assigned an institution type (UNI/EPF vs HES/HEP) and a degree level (Bachelor vs Master), with nominal durations of 3 years (Bachelor) and 5 years cumulative (Master), allowed to vary within bounded intervals. A highest-diploma attribute is exported for use by other dimensions.</p>
+</div>
+
+<!-- ---------- 3. Driving Licence ---------- -->
+<div class="dim">
+  <h3 class="dim-title">Driving Licence <span class="dim-tag">03</span></h3>
+  <p>The dimension describes the transition between two states, "no driving licence" and "driving licence". Every individual starts without a licence; once obtained, ownership is assumed <strong>irreversible</strong>. In the baseline, the acquisition probability is constant for everyone surviving past the legal age of 18, and the acquisition age follows a truncated log-normal concentrated shortly after that age.</p>
+  <p>The extended model introduces two refinements. First, the probability of obtaining a licence depends on <strong>sex</strong> and on <strong>tertiary-education participation</strong>—the latter capturing delayed or less frequent acquisition among students. Second, the acquisition age is allowed to differ by sex.</p>
+  <div class="formula">
+    <span class="formula-label">Heterogeneous acquisition</span>
+    P(i<sub>DL</sub> = 1 | sex = s, TE = u) = p<sub>s</sub> · ψ<sub>u</sub><br>
+    p<sub>female</sub> = 0.78, &nbsp; p<sub>male</sub> = 0.86 &nbsp;·&nbsp; ψ<sub>0</sub> = 1, &nbsp; ψ<sub>1</sub> = 0.90
+  </div>
+  <p class="prose-sm">Conditional on acquisition, the age follows a sex-specific truncated log-normal on [18, min(70, lifespan)], slightly later and more dispersed for women, consistent with observed Swiss mobility statistics.</p>
+</div>
+
+<!-- ---------- 4. Work ---------- -->
+<div class="dim">
+  <h3 class="dim-title">Work <span class="dim-tag">04</span></h3>
+  <p>The Work dimension is a sequence of employment spells separated by gaps, fitting within an active window that ends at age 70 or at death. Labour-market entry age is conditioned on education; each spell duration is drawn from an age-dependent truncated exponential, capped by an explicit residual-budget bound so the career never overruns the active window; income follows a Mincer equation with separate returns to secondary and tertiary education.</p>
+  <div class="formula">
+    <span class="formula-label">Entry · spell duration · income</span>
+    a<sub>entry</sub> ~ N(μ(SE,TE), 1.5²), &nbsp; μ ∈ {16.5, 18.0, 23.0}<br>
+    d<sub>Wk</sub> ~ Exp(mean = d̄(a<sub>k</sub>)) on [0, U<sub>k</sub>], &nbsp; d̄ ∈ {1.5, 2.5, 3.5, 4.5, 9.0}<br>
+    ln(inc<sub>k</sub>) ~ N(β₀ + β₁·work + β₂·work² + ρ<sub>SE</sub>·SE + ρ<sub>TE</sub>·TE, σ²)
+  </div>
+  <p class="prose-sm">The place of work uses a four-class density-based multiplier δ(c) ∈ {2.0, 1.5, 1.2, 1.0}; inter-canton mobility follows a decreasing schedule X(k) from 30% to 5% by spell rank, with M<sub>k</sub> ~ Bernoulli(X(k)).</p>
+</div>
+
+<!-- ---------- 5. Residence ---------- -->
+<div class="dim">
+  <h3 class="dim-title">Residence <span class="dim-tag">05</span></h3>
+  <p>Residence spells are aligned to work spells. The birth canton is drawn proportional to cantonal population. A single relocation opportunity at tertiary entry can move students to the canton of their institution. During employment, the home canton follows the work canton through the same mobility indicator M<sub>k</sub> drawn in the Work dimension, with an alignment probability conditioned on the geographical relationship between the new workplace and the previous home.</p>
+  <div class="formula">
+    <span class="formula-label">Birth canton · geography-aware alignment</span>
+    P(c<sup>B</sup> = c) = N<sub>c</sub> / ΣN<sub>c'</sub><br>
+    P(home<sub>k</sub> = work<sub>k</sub> | M<sub>k</sub>=1, k≥2) = 0.50 if neighbouring, &nbsp; 0.90 otherwise
+  </div>
+</div>
+
+<h2 class="section-title">Production runs</h2>
+<p class="prose">Time-independent comparisons are computed on a cohort of 50,000 individuals; projections onto reference calendar years use 100,000 individuals. All reported results are computed on post-burn-in draws of the Hit-and-Run chain.</p>
+
+<!-- ===== END METHODOLOGY CONTENT ===== -->
