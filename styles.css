@@ -80,6 +80,29 @@ body{
   letter-spacing:-.02em; margin:0 0 24px; max-width:14ch;
 }
 .hero-title em{ font-style:italic; font-weight:400; color:var(--epfl); }
+.hero-title-en{
+  max-width:16ch;
+}
+
+.hero-subtitle{
+  margin:18px 0 0;
+  max-width:48ch;
+  font-family:var(--mono);
+  font-size:clamp(.9rem, 1.5vw, 1.08rem);
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+.hero-subtitle::before{
+  content:"";
+  display:inline-block;
+  width:42px;
+  height:1px;
+  background:var(--epfl);
+  vertical-align:middle;
+  margin-right:14px;
+}
 .hero-credits{
   margin:26px 0 0;
   padding-left:2px;
