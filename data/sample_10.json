@@ -1,0 +1,1028 @@
+{
+ "people": [
+  {
+   "id": 19310,
+   "birth_year": 1999.4,
+   "sex": "Male",
+   "birth_canton": "OW",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 18.11,
+     "year_start": 1999.4,
+     "year_end": 2017.5,
+     "canton": "Geneva"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 18.11,
+     "age_end": 24.25,
+     "year_start": 2017.5,
+     "year_end": 2023.6,
+     "canton": "Geneva"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 24.25,
+     "age_end": 31.05,
+     "year_start": 2023.6,
+     "year_end": 2030.4,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 31.05,
+     "age_end": 37.08,
+     "year_start": 2030.4,
+     "year_end": 2036.5,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 37.08,
+     "age_end": 47.36,
+     "year_start": 2036.5,
+     "year_end": 2046.7,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 47.36,
+     "age_end": 49.63,
+     "year_start": 2046.7,
+     "year_end": 2049.0,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 49.63,
+     "age_end": 109.63,
+     "year_start": 2049.0,
+     "year_end": 2109.0,
+     "canton": "Zurich"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2003.4,
+     "year_end": 2014.4,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2014.4,
+     "year_end": 2018.4,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "DL",
+     "age_start": 19.94,
+     "age_end": 109.63,
+     "year_start": 2019.3,
+     "year_end": 2109.0,
+     "kind": "licence",
+     "obtained_age": 109.63,
+     "obtained_year": 2109.0
+    }
+   ],
+   "lifespan": 109.6
+  },
+  {
+   "id": 72060,
+   "birth_year": 1864.9,
+   "sex": "Male",
+   "birth_canton": "LU",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 23.57,
+     "year_start": 1864.9,
+     "year_end": 1888.5,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 23.57,
+     "age_end": 25.66,
+     "year_start": 1888.5,
+     "year_end": 1890.6,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 25.66,
+     "age_end": 31.85,
+     "year_start": 1890.6,
+     "year_end": 1896.8,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 31.85,
+     "age_end": 42.21,
+     "year_start": 1896.8,
+     "year_end": 1907.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 42.21,
+     "age_end": 49.16,
+     "year_start": 1907.1,
+     "year_end": 1914.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 49.16,
+     "age_end": 58.84,
+     "year_start": 1914.1,
+     "year_end": 1923.7,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 58.84,
+     "age_end": 68.05,
+     "year_start": 1923.7,
+     "year_end": 1933.0,
+     "canton": "Vaud"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1868.9,
+     "year_end": 1879.9,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.06,
+     "year_start": 1879.9,
+     "year_end": 1884.0,
+     "kind": "education",
+     "pathway": "ASE",
+     "institution": null,
+     "level": null,
+     "title": "ECG"
+    },
+    {
+     "event": "TertiaryEduc",
+     "age_start": 19.44,
+     "age_end": 33.48,
+     "year_start": 1884.3,
+     "year_end": 1898.4,
+     "kind": "education",
+     "pathway": null,
+     "institution": "UNI_EPF",
+     "level": "Master",
+     "title": null
+    },
+    {
+     "event": "DL",
+     "age_start": 30.81,
+     "age_end": 68.05,
+     "year_start": 1895.7,
+     "year_end": 1933.0,
+     "kind": "licence",
+     "obtained_age": 68.05,
+     "obtained_year": 1933.0
+    }
+   ],
+   "lifespan": 68.1
+  },
+  {
+   "id": 3907,
+   "birth_year": 2003.4,
+   "sex": "Female",
+   "birth_canton": "BE",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 17.46,
+     "year_start": 2003.4,
+     "year_end": 2020.9,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 17.46,
+     "age_end": 19.21,
+     "year_start": 2020.9,
+     "year_end": 2022.6,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 19.21,
+     "age_end": 26.9,
+     "year_start": 2022.6,
+     "year_end": 2030.3,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 26.9,
+     "age_end": 31.92,
+     "year_start": 2030.3,
+     "year_end": 2035.3,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 31.92,
+     "age_end": 35.02,
+     "year_start": 2035.3,
+     "year_end": 2038.4,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 35.02,
+     "age_end": 44.53,
+     "year_start": 2038.4,
+     "year_end": 2047.9,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 44.53,
+     "age_end": 47.81,
+     "year_start": 2047.9,
+     "year_end": 2051.2,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 47.81,
+     "age_end": 53.73,
+     "year_start": 2051.2,
+     "year_end": 2057.1,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 53.73,
+     "age_end": 80.67,
+     "year_start": 2057.1,
+     "year_end": 2084.1,
+     "canton": "Bern"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2007.4,
+     "year_end": 2018.4,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2018.4,
+     "year_end": 2022.4,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    }
+   ],
+   "lifespan": 80.7
+  },
+  {
+   "id": 80696,
+   "birth_year": 1980.7,
+   "sex": "Female",
+   "birth_canton": "BS",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 20.58,
+     "year_start": 1980.7,
+     "year_end": 2001.2,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 20.58,
+     "age_end": 22.54,
+     "year_start": 2001.2,
+     "year_end": 2003.2,
+     "canton": "Thurgau"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 22.54,
+     "age_end": 24.09,
+     "year_start": 2003.2,
+     "year_end": 2004.7,
+     "canton": "Thurgau"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 24.09,
+     "age_end": 25.96,
+     "year_start": 2004.7,
+     "year_end": 2006.6,
+     "canton": "Thurgau"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 25.96,
+     "age_end": 29.1,
+     "year_start": 2006.6,
+     "year_end": 2009.8,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 29.1,
+     "age_end": 35.73,
+     "year_start": 2009.8,
+     "year_end": 2016.4,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 35.73,
+     "age_end": 43.79,
+     "year_start": 2016.4,
+     "year_end": 2024.5,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 43.79,
+     "age_end": 50.85,
+     "year_start": 2024.5,
+     "year_end": 2031.5,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 50.85,
+     "age_end": 72.39,
+     "year_start": 2031.5,
+     "year_end": 2053.1,
+     "canton": "Zurich"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1984.7,
+     "year_end": 1995.7,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.25,
+     "year_start": 1995.7,
+     "year_end": 1999.9,
+     "kind": "education",
+     "pathway": "ASE",
+     "institution": null,
+     "level": null,
+     "title": "Maturite"
+    },
+    {
+     "event": "TertiaryEduc",
+     "age_start": 19.55,
+     "age_end": 20.97,
+     "year_start": 2000.2,
+     "year_end": 2001.6,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    }
+   ],
+   "lifespan": 72.4
+  },
+  {
+   "id": 37378,
+   "birth_year": 1896.4,
+   "sex": "Female",
+   "birth_canton": "UR",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 16.43,
+     "year_start": 1896.4,
+     "year_end": 1912.8,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 16.43,
+     "age_end": 17.31,
+     "year_start": 1912.8,
+     "year_end": 1913.7,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 17.31,
+     "age_end": 21.91,
+     "year_start": 1913.7,
+     "year_end": 1918.3,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 21.91,
+     "age_end": 27.68,
+     "year_start": 1918.3,
+     "year_end": 1924.1,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 27.68,
+     "age_end": 35.96,
+     "year_start": 1924.1,
+     "year_end": 1932.4,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 35.96,
+     "age_end": 47.34,
+     "year_start": 1932.4,
+     "year_end": 1943.8,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 47.34,
+     "age_end": 51.23,
+     "year_start": 1943.8,
+     "year_end": 1947.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 51.23,
+     "age_end": 53.22,
+     "year_start": 1947.6,
+     "year_end": 1949.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 53.22,
+     "age_end": 58.64,
+     "year_start": 1949.6,
+     "year_end": 1955.0,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_9",
+     "age_start": 58.64,
+     "age_end": 89.29,
+     "year_start": 1955.0,
+     "year_end": 1985.7,
+     "canton": "Zurich"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1900.4,
+     "year_end": 1911.4,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    }
+   ],
+   "lifespan": 89.3
+  },
+  {
+   "id": 85656,
+   "birth_year": 1966.2,
+   "sex": "Male",
+   "birth_canton": "LU",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 19.59,
+     "year_start": 1966.2,
+     "year_end": 1985.7,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 19.59,
+     "age_end": 20.91,
+     "year_start": 1985.7,
+     "year_end": 1987.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 20.91,
+     "age_end": 22.84,
+     "year_start": 1987.1,
+     "year_end": 1989.0,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 22.84,
+     "age_end": 25.25,
+     "year_start": 1989.0,
+     "year_end": 1991.4,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 25.25,
+     "age_end": 28.13,
+     "year_start": 1991.4,
+     "year_end": 1994.3,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 28.13,
+     "age_end": 37.87,
+     "year_start": 1994.3,
+     "year_end": 2004.0,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 37.87,
+     "age_end": 38.34,
+     "year_start": 2004.0,
+     "year_end": 2004.5,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 38.34,
+     "age_end": 47.45,
+     "year_start": 2004.5,
+     "year_end": 2013.6,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 47.45,
+     "age_end": 47.92,
+     "year_start": 2013.6,
+     "year_end": 2014.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_9",
+     "age_start": 47.92,
+     "age_end": 88.84,
+     "year_start": 2014.1,
+     "year_end": 2055.0,
+     "canton": "Vaud"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1970.2,
+     "year_end": 1981.2,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1981.2,
+     "year_end": 1985.2,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "DL",
+     "age_start": 36.04,
+     "age_end": 88.84,
+     "year_start": 2002.2,
+     "year_end": 2055.0,
+     "kind": "licence",
+     "obtained_age": 88.84,
+     "obtained_year": 2055.0
+    }
+   ],
+   "lifespan": 88.8
+  },
+  {
+   "id": 30166,
+   "birth_year": 1908.7,
+   "sex": "Male",
+   "birth_canton": "NW",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 22.21,
+     "year_start": 1908.7,
+     "year_end": 1930.9,
+     "canton": "Lucerne"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 22.21,
+     "age_end": 26.29,
+     "year_start": 1930.9,
+     "year_end": 1935.0,
+     "canton": "Lucerne"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 26.29,
+     "age_end": 33.74,
+     "year_start": 1935.0,
+     "year_end": 1942.4,
+     "canton": "Lucerne"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 33.74,
+     "age_end": 35.03,
+     "year_start": 1942.4,
+     "year_end": 1943.7,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 35.03,
+     "age_end": 40.1,
+     "year_start": 1943.7,
+     "year_end": 1948.8,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 40.1,
+     "age_end": 83.74,
+     "year_start": 1948.8,
+     "year_end": 1992.4,
+     "canton": "Schwyz"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1912.7,
+     "year_end": 1923.7,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.91,
+     "year_start": 1923.7,
+     "year_end": 1928.6,
+     "kind": "education",
+     "pathway": "ASE",
+     "institution": null,
+     "level": null,
+     "title": "Maturite"
+    },
+    {
+     "event": "TertiaryEduc",
+     "age_start": 21.42,
+     "age_end": 32.39,
+     "year_start": 1930.1,
+     "year_end": 1941.1,
+     "kind": "education",
+     "pathway": null,
+     "institution": "HES_HEP",
+     "level": "Bachelor",
+     "title": null
+    },
+    {
+     "event": "DL",
+     "age_start": 27.11,
+     "age_end": 83.74,
+     "year_start": 1935.8,
+     "year_end": 1992.4,
+     "kind": "licence",
+     "obtained_age": 83.74,
+     "obtained_year": 1992.4
+    }
+   ],
+   "lifespan": 83.7
+  },
+  {
+   "id": 9819,
+   "birth_year": 2021.1,
+   "sex": "Female",
+   "birth_canton": "UR",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 18.7,
+     "year_start": 2021.1,
+     "year_end": 2039.8,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 18.7,
+     "age_end": 20.0,
+     "year_start": 2039.8,
+     "year_end": 2041.1,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 20.0,
+     "age_end": 20.73,
+     "year_start": 2041.1,
+     "year_end": 2041.8,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 20.73,
+     "age_end": 28.6,
+     "year_start": 2041.8,
+     "year_end": 2049.7,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 28.6,
+     "age_end": 85.05,
+     "year_start": 2049.7,
+     "year_end": 2106.1,
+     "canton": "Aargau"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2025.1,
+     "year_end": 2036.1,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2036.1,
+     "year_end": 2040.1,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "DL",
+     "age_start": 22.81,
+     "age_end": 85.05,
+     "year_start": 2043.9,
+     "year_end": 2106.1,
+     "kind": "licence",
+     "obtained_age": 85.05,
+     "obtained_year": 2106.1
+    }
+   ],
+   "lifespan": 85.1
+  },
+  {
+   "id": 35582,
+   "birth_year": 2008.6,
+   "sex": "Female",
+   "birth_canton": "LU",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 17.48,
+     "year_start": 2008.6,
+     "year_end": 2026.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 17.48,
+     "age_end": 22.05,
+     "year_start": 2026.1,
+     "year_end": 2030.6,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 22.05,
+     "age_end": 23.34,
+     "year_start": 2030.6,
+     "year_end": 2031.9,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 23.34,
+     "age_end": 107.45,
+     "year_start": 2031.9,
+     "year_end": 2116.0,
+     "canton": "Vaud"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2012.6,
+     "year_end": 2023.6,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "DL",
+     "age_start": 21.6,
+     "age_end": 107.45,
+     "year_start": 2030.2,
+     "year_end": 2116.0,
+     "kind": "licence",
+     "obtained_age": 107.45,
+     "obtained_year": 2116.0
+    }
+   ],
+   "lifespan": 107.5
+  },
+  {
+   "id": 77194,
+   "birth_year": 1869.1,
+   "sex": "Female",
+   "birth_canton": "AG",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 18.85,
+     "year_start": 1869.1,
+     "year_end": 1888.0,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 18.85,
+     "age_end": 19.27,
+     "year_start": 1888.0,
+     "year_end": 1888.4,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 19.27,
+     "age_end": 24.8,
+     "year_start": 1888.4,
+     "year_end": 1893.9,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 24.8,
+     "age_end": 25.45,
+     "year_start": 1893.9,
+     "year_end": 1894.6,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 25.45,
+     "age_end": 42.4,
+     "year_start": 1894.6,
+     "year_end": 1911.5,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 42.4,
+     "age_end": 44.31,
+     "year_start": 1911.5,
+     "year_end": 1913.4,
+     "canton": "Schaffhausen"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 44.31,
+     "age_end": 64.13,
+     "year_start": 1913.4,
+     "year_end": 1933.2,
+     "canton": "Schaffhausen"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1873.1,
+     "year_end": 1884.1,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1884.1,
+     "year_end": 1888.1,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "DL",
+     "age_start": 21.23,
+     "age_end": 64.13,
+     "year_start": 1890.3,
+     "year_end": 1933.2,
+     "kind": "licence",
+     "obtained_age": 64.13,
+     "obtained_year": 1933.2
+    }
+   ],
+   "lifespan": 64.1
+  }
+ ]
+}

@@ -56,7 +56,7 @@ function initGallery() {
       if (fig && !fig.querySelector('.ph-label')) {
         const label = document.createElement('span');
         label.className = 'ph-label';
-        label.textContent = img.dataset.ph || 'img/…';
+        label.textContent = img.dataset.ph || img.getAttribute('src') || 'img/…';
         img.insertAdjacentElement('afterend', label);
       }
     };
@@ -117,6 +117,8 @@ function renderTable(rows, title) {
   const block = document.createElement('div');
   block.className = 'csv-block';
 
+  const [header, ...body] = rows;
+
   if (title) {
     const h = document.createElement('h3');
     h.className = 'csv-title';
@@ -124,12 +126,17 @@ function renderTable(rows, title) {
     block.appendChild(h);
   }
 
+  // Méta : nombre de lignes / colonnes
+  const meta = document.createElement('p');
+  meta.className = 'csv-meta';
+  meta.textContent = `${body.length.toLocaleString('fr-CH')} rows · ${header.length} columns`;
+  block.appendChild(meta);
+
   const wrap = document.createElement('div');
   wrap.className = 'table-wrap';
   const table = document.createElement('table');
   table.className = 'data-table';
 
-  const [header, ...body] = rows;
   const thead = document.createElement('thead');
   const trh = document.createElement('tr');
   header.forEach(h => {
@@ -141,20 +148,50 @@ function renderTable(rows, title) {
   table.appendChild(thead);
 
   const tbody = document.createElement('tbody');
-  body.forEach(r => {
-    const tr = document.createElement('tr');
-    header.forEach((_, j) => {
-      const td = document.createElement('td');
-      td.textContent = (r[j] ?? '').trim();
-      tr.appendChild(td);
-    });
-    tbody.appendChild(tr);
-  });
   table.appendChild(tbody);
-
   wrap.appendChild(table);
   block.appendChild(wrap);
+
+  // ---------- Pagination (pour gros CSV, ex. 100 000 lignes) ----------
+  const PAGE = 50;
+  let page = 0;
+  const pageCount = Math.max(1, Math.ceil(body.length / PAGE));
+
+  const nav = document.createElement('div');
+  nav.className = 'csv-pager';
+  const prev = document.createElement('button');
+  prev.className = 'pager-btn'; prev.textContent = '← Prev';
+  const next = document.createElement('button');
+  next.className = 'pager-btn'; next.textContent = 'Next →';
+  const label = document.createElement('span');
+  label.className = 'pager-label';
+  nav.appendChild(prev); nav.appendChild(label); nav.appendChild(next);
+
+  function renderPage() {
+    tbody.innerHTML = '';
+    const start = page * PAGE;
+    const slice = body.slice(start, start + PAGE);
+    const frag = document.createDocumentFragment();
+    slice.forEach(r => {
+      const tr = document.createElement('tr');
+      header.forEach((_, j) => {
+        const td = document.createElement('td');
+        td.textContent = (r[j] ?? '').trim();
+        tr.appendChild(td);
+      });
+      frag.appendChild(tr);
+    });
+    tbody.appendChild(frag);
+    label.textContent = `Page ${page + 1} / ${pageCount}  ·  rows ${start + 1}–${Math.min(start + PAGE, body.length)}`;
+    prev.disabled = page === 0;
+    next.disabled = page >= pageCount - 1;
+  }
+  prev.addEventListener('click', () => { if (page > 0) { page--; renderPage(); } });
+  next.addEventListener('click', () => { if (page < pageCount - 1) { page++; renderPage(); } });
+
+  if (pageCount > 1) block.appendChild(nav);
   container.appendChild(block);
+  renderPage();
 }
 
 function updateEmptyHint() {
@@ -213,4 +250,5 @@ function initCSV() {
   initTabs();         // nav
   initGallery();      // emplacements PNG
   initCSV();          // tableaux CSV
+  if (typeof initTimelines === 'function') initTimelines();  // frises
 })();
