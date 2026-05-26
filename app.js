@@ -6,9 +6,7 @@
    CONFIG — CSV chargé automatiquement depuis data/ (site en ligne).
    Pour l'instant un seul fichier. Changez le chemin/titre si besoin.
    ------------------------------------------------------------ */
-const CSV_FILES = [
-  { file: "data/results.csv", title: "Résultats" },
-];
+const CSV_FILES = [];  // CSV table removed from the site
 
 /* ============================================================
    1) CHARGEMENT DES FRAGMENTS D'ONGLETS
@@ -23,7 +21,7 @@ async function loadTabs() {
       if (!res.ok) throw new Error(res.status);
       sec.innerHTML = await res.text();
     } catch (e) {
-      sec.innerHTML = `<div class="results-banner"><p><strong>Onglet non chargé.</strong> Impossible de charger <code>${sec.dataset.src}</code>. En local, ouvrez le site via un serveur (<code>python3 -m http.server</code>) plutôt qu'en double-clic.</p></div>`;
+      sec.innerHTML = `<div class="results-banner"><p><strong>Tab not loaded.</strong> Could not load <code>${sec.dataset.src}</code>. Locally, open the site through a server (<code>python3 -m http.server</code>) rather than by double-clicking.</p></div>`;
       console.warn(`Fragment non chargé : ${sec.dataset.src}`, e);
     }
   }));
@@ -204,7 +202,7 @@ function updateEmptyHint() {
       hint = document.createElement('p');
       hint.id = 'csvEmptyHint';
       hint.className = 'csv-empty';
-      hint.textContent = "Aucun tableau chargé pour l'instant. Déposez votre CSV dans data/results.csv (en ligne) ou utilisez le bouton « Charger un CSV… » ci-dessus.";
+      hint.textContent = "No table loaded yet. Drop your CSV at data/results.csv (online) or use the “Load a CSV…” button above.";
       container.appendChild(hint);
     }
   } else if (hint) {
