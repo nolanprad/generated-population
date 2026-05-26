@@ -389,6 +389,7 @@ code{ font-family:var(--mono); font-size:.85em; background:var(--paper-2); paddi
 .tl-ax-age{ fill:var(--ink-soft); }
 .tl-seg-label{ font-family:var(--mono); font-size:10px; fill:#fff; pointer-events:none; }
 .tl-row-label{ font-family:var(--mono); font-size:9px; fill:var(--ink-faint); text-transform:uppercase; }
+.tl-legend-label{ font-family:var(--mono); font-size:10px; fill:var(--ink-soft); }
 
 /* ---------- Compare table (framework -> this work) ---------- */
 .compare{ width:100%; border-collapse:collapse; margin:14px 0 4px; font-size:.95rem; }
