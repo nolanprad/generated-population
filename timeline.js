@@ -6,10 +6,15 @@
 
 const TL = {
   colors: {
-    education: '#2c5f6f',
     licence:   '#b8860b',
     neutral:   '#9a948a',
     grid:      '#d8d3c7',
+  },
+  // éducation : du clair (primaire) au foncé (tertiaire)
+  eduColors: {
+    MandatoryEduc: '#a3c9a8',  // vert clair
+    SecondaryEduc: '#3f7d5a',  // vert foncé
+    TertiaryEduc:  '#1c3b2e',  // vert très foncé / quasi noir
   },
   cantonPalette: [
     '#d50032', '#2c5f6f', '#e8a33d', '#5b8c5a', '#7d5ba6',
@@ -153,9 +158,9 @@ function drawResidence(person, width, colorMap) {
 
 function drawLife(person, width, colorMap) {
   const ageMax = Math.ceil(person.lifespan || 90);
-  const height = TL.padT + 3 * (TL.rowH + TL.gap) + TL.padB;
+  const height = TL.padT + 3 * (TL.rowH + TL.gap) + TL.padB + TL.legendH;
   const svg = makeSVG(width, height);
-  tlAxis(svg, ageMax, person.birth_year, width, height);
+  tlAxis(svg, ageMax, person.birth_year, width, height - TL.legendH);
   const x = tlScale(ageMax, width);
   const yEdu = TL.padT;
   const yWork = TL.padT + (TL.rowH + TL.gap);
@@ -165,7 +170,8 @@ function drawLife(person, width, colorMap) {
   tlRowLabel(svg, yLic, 'Licence');
   person.events.forEach(e => {
     if (e.kind === 'education') {
-      tlSegment(svg, x(e.age_start), yEdu, x(e.age_end), TL.colors.education,
+      const col = TL.eduColors[e.event] || TL.eduColors.SecondaryEduc;
+      tlSegment(svg, x(e.age_start), yEdu, x(e.age_end), col,
         '', eduTooltip(e));
     } else if (e.kind === 'work') {
       const col = colorMap[e.place_work] || TL.colors.neutral;
@@ -178,6 +184,13 @@ function drawLife(person, width, colorMap) {
         `Driving licence obtained at age ${Math.round(e.obtained_age)} (${Math.round(e.obtained_year)})`);
     }
   });
+  // légende des niveaux d'éducation
+  const eduLegend = {
+    'Primary': TL.eduColors.MandatoryEduc,
+    'Secondary': TL.eduColors.SecondaryEduc,
+    'Tertiary': TL.eduColors.TertiaryEduc,
+  };
+  tlLegend(svg, eduLegend, height - TL.legendH + 6);
   return svg;
 }
 
