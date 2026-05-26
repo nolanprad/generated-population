@@ -1,0 +1,81 @@
+<!-- ============================================================
+     ONGLET 03 — RÉSULTATS
+     Galerie de plots PNG + tableau(x) depuis CSV.
+     ============================================================ -->
+
+<!-- ---------- Plots PNG, segmented by trajectory ----------
+     Place PNG exports in an img/ folder at the site root, keeping the
+     file names below. Empty <img src=""> slots show the expected file
+     name as a grey placeholder until the image is added.
+     Existence / Education / Driving Licence -> to be filled by Nolan.
+     Work / Residence -> Fabrice's plots, pre-wired. -->
+
+<div class="results-banner">
+  <p><strong>Results by trajectory.</strong> Each trajectory has its own section. Drop the PNGs into <code>img/</code> using the file names shown; adjust captions freely.</p>
+</div>
+
+<!-- ===== EXISTENCE ===== -->
+<h2 class="section-title">Existence</h2>
+<div class="gallery">
+  <figure class="plot"><img src="" alt="" data-ph="img/existence_1.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/existence_2.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/existence_3.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/existence_4.png"><figcaption>[Caption]</figcaption></figure>
+</div>
+
+<!-- ===== EDUCATION ===== -->
+<h2 class="section-title">Education</h2>
+<div class="gallery">
+  <figure class="plot"><img src="" alt="" data-ph="img/education_1.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/education_2.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/education_3.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/education_4.png"><figcaption>[Caption]</figcaption></figure>
+</div>
+
+<!-- ===== DRIVING LICENCE ===== -->
+<h2 class="section-title">Driving Licence</h2>
+<div class="gallery">
+  <figure class="plot"><img src="" alt="" data-ph="img/licence_1.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/licence_2.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/licence_3.png"><figcaption>[Caption]</figcaption></figure>
+  <figure class="plot"><img src="" alt="" data-ph="img/licence_4.png"><figcaption>[Caption]</figcaption></figure>
+</div>
+
+<!-- ===== WORK ===== -->
+<h2 class="section-title">Work</h2>
+<div class="gallery">
+  <figure class="plot"><img src="img/updated_entry_age.png" alt="Labour-market entry age by education"><figcaption>Labour-market entry age, by education pathway</figcaption></figure>
+  <figure class="plot"><img src="img/updated_spell_duration.png" alt="Employment spell durations"><figcaption>Employment spell durations</figcaption></figure>
+  <figure class="plot"><img src="img/updated_income_by_education.png" alt="Income by education level"><figcaption>Income distribution, by education level</figcaption></figure>
+  <figure class="plot"><img src="img/updated_income_career.png" alt="Income over the career"><figcaption>Income over the career</figcaption></figure>
+  <figure class="plot"><img src="img/updated_place_of_work.png" alt="Cantonal place-of-work distribution"><figcaption>Cantonal distribution of the place of work</figcaption></figure>
+</div>
+
+<!-- ===== RESIDENCE ===== -->
+<h2 class="section-title">Residence</h2>
+<div class="gallery">
+  <figure class="plot"><img src="img/updated_initial_residence.png" alt="Initial residence after education"><figcaption>Initial residence after education</figcaption></figure>
+  <figure class="plot"><img src="img/updated_home_work_alignment.png" alt="Home vs work canton"><figcaption>Home vs work canton alignment</figcaption></figure>
+  <figure class="plot"><img src="img/updated_lifetime_mobility.png" alt="Lifetime mobility"><figcaption>Lifetime inter-cantonal mobility</figcaption></figure>
+</div>
+
+<!-- ---------- Frises chronologiques (10 individus échantillonnés) ---------- -->
+<h2 class="section-title">Sample of individual lives</h2>
+<div class="results-banner">
+  <p><strong>Timelines.</strong> Ten individuals drawn at random from the synthetic cohort. Each has a life timeline (education, work with salary &amp; place, driving licence) and a separate residence timeline. Both axes are shown: age on top, calendar year below. Generate the data with <code>scripts/make_sample.py</code> &rarr; <code>data/sample_10.json</code>.</p>
+</div>
+<div id="timelines"></div>
+
+<!-- ---------- Tableau depuis CSV ---------- -->
+<h2 class="section-title">Tableau de données</h2>
+<div class="results-banner">
+  <p><strong>CSV.</strong> Déposez votre fichier dans <code>data/results.csv</code> (chargé automatiquement en ligne) ou utilisez le bouton <em>Charger un CSV…</em> ci-dessous (marche aussi en local). Séparateur virgule.</p>
+</div>
+<div class="csv-controls">
+  <label class="btn-upload">
+    Charger un CSV…
+    <input type="file" id="csvInput" accept=".csv,.tsv,text/csv" multiple hidden>
+  </label>
+  <span class="csv-hint">Les colonnes s'affichent dans l'ordre du fichier. Vous réagencerez ensuite.</span>
+</div>
+<div id="csvTables"></div>
