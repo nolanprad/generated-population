@@ -145,7 +145,7 @@ function drawResidence(person, width, colorMap) {
   person.residence.forEach(s => {
     const col = colorMap[s.canton] || TL.colors.neutral;
     tlSegment(svg, x(s.age_start), y, x(s.age_end), col,
-      s.canton || '', `${s.year_start}–${s.year_end}`);
+      '', `${s.canton || ''} · ${s.year_start}–${s.year_end}`);
   });
   tlLegend(svg, colorMap, height - TL.legendH + 6);
   return svg;
@@ -166,13 +166,13 @@ function drawLife(person, width, colorMap) {
   person.events.forEach(e => {
     if (e.kind === 'education') {
       tlSegment(svg, x(e.age_start), yEdu, x(e.age_end), TL.colors.education,
-        eduLabel(e), eduTooltip(e));
+        '', eduTooltip(e));
     } else if (e.kind === 'work') {
       const col = colorMap[e.place_work] || TL.colors.neutral;
       const sub = e.income
         ? `${e.place_work || ''} · ${e.income.toLocaleString('fr-CH')} CHF · ${e.year_start}–${e.year_end}`
         : `${e.place_work || ''} · ${e.year_start}–${e.year_end}`;
-      tlSegment(svg, x(e.age_start), yWork, x(e.age_end), col, e.place_work || 'Work', sub);
+      tlSegment(svg, x(e.age_start), yWork, x(e.age_end), col, '', sub);
     } else if (e.kind === 'licence' && e.obtained_age != null) {
       tlMarker(svg, x(e.obtained_age), yLic, TL.colors.licence,
         `Driving licence obtained at age ${Math.round(e.obtained_age)} (${Math.round(e.obtained_year)})`);
