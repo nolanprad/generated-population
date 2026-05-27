@@ -142,10 +142,6 @@
     <span class="dim-tag">Report 2</span>
   </div>
   <p>The Swiss education system is modelled at a fine institutional level: compulsory schooling, vocational education and training (VET/CFC), baccalaureate schools (<em>gymnase</em>), specialised schools, and tertiary pathways. Completion probabilities and transition rates are drawn from official FSO statistics [7–13].</p>
-  <div class="formula">
-    <span class="formula-label">Initial residence at end of education phase</span>
-    P(canton<sub>0</sub> ≠ birth canton) = f(tertiary enrolment, FSO origin-destination data [10])
-  </div>
 </div>
 
 <div class="dim">
@@ -154,12 +150,7 @@
     <span class="dim-tag">Report 1</span>
   </div>
   <p>Labour-market entry is modelled with education-attainment-specific delays, replacing the single Gaussian used in the baseline. Employment spell durations follow an age-dependent schedule recalibrated from the U.S. NLSY [3] with Swiss corrections. Income is estimated via a Mincer-type wage equation [4] with separate education returns for secondary and tertiary graduates, consistent with the FSO Earnings Structure Survey [8].</p>
-  <div class="formula">
-    <span class="formula-label">Mincer wage equation (refined)</span>
-    ln(w) = α + β<sub>educ</sub> · educ + β<sub>exp</sub> · exp + β<sub>exp²</sub> · exp² + ε
   </div>
-  <p style="font-size:.88rem; color:var(--ink-faint); margin-top:6px;">β<sub>educ</sub> now takes distinct values for secondary and tertiary education, rather than a single return.</p>
-</div>
 
 <div class="dim">
   <div class="dim-title">
@@ -167,10 +158,6 @@
     <span class="dim-tag">Report 1</span>
   </div>
   <p>The constant move probability <em>p<sub>h</sub> = 0.95</em> of the baseline is replaced by a career-stage-dependent schedule, following Lerch's [6] finding that residential mobility decreases monotonically over the life course. The binary urban/rural boost applied to four cantons is replaced by a continuous population-density gradient across all 26 cantons, derived from FSO cantonal statistics [9].</p>
-  <div class="formula">
-    <span class="formula-label">Residence-move probability</span>
-    P(move | age, career stage, Δ-canton density) = σ( γ<sub>0</sub> + γ<sub>age</sub> · age + γ<sub>density</sub> · Δρ )
-  </div>
 </div>
 
 <!-- Validation -->
