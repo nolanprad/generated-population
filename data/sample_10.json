@@ -1,65 +1,49 @@
 {
  "people": [
   {
-   "id": 19310,
-   "birth_year": 1999.4,
+   "id": 33965,
+   "birth_year": 1883.8,
    "sex": "Male",
-   "birth_canton": "OW",
+   "birth_canton": "GR",
    "residence": [
     {
      "event": "Home0",
      "age_start": 0.0,
-     "age_end": 18.11,
-     "year_start": 1999.4,
-     "year_end": 2017.5,
-     "canton": "Geneva"
+     "age_end": 16.69,
+     "year_start": 1883.8,
+     "year_end": 1900.5,
+     "canton": "Zug"
     },
     {
      "event": "Home_1",
-     "age_start": 18.11,
-     "age_end": 24.25,
-     "year_start": 2017.5,
-     "year_end": 2023.6,
-     "canton": "Geneva"
+     "age_start": 16.69,
+     "age_end": 19.72,
+     "year_start": 1900.5,
+     "year_end": 1903.5,
+     "canton": "Zug"
     },
     {
      "event": "Home_2",
-     "age_start": 24.25,
-     "age_end": 31.05,
-     "year_start": 2023.6,
-     "year_end": 2030.4,
-     "canton": "Zurich"
+     "age_start": 19.72,
+     "age_end": 22.33,
+     "year_start": 1903.5,
+     "year_end": 1906.1,
+     "canton": "Zug"
     },
     {
      "event": "Home_3",
-     "age_start": 31.05,
-     "age_end": 37.08,
-     "year_start": 2030.4,
-     "year_end": 2036.5,
+     "age_start": 22.33,
+     "age_end": 23.34,
+     "year_start": 1906.1,
+     "year_end": 1907.1,
      "canton": "Zurich"
     },
     {
      "event": "Home_4",
-     "age_start": 37.08,
-     "age_end": 47.36,
-     "year_start": 2036.5,
-     "year_end": 2046.7,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 47.36,
-     "age_end": 49.63,
-     "year_start": 2046.7,
-     "year_end": 2049.0,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_6",
-     "age_start": 49.63,
-     "age_end": 109.63,
-     "year_start": 2049.0,
-     "year_end": 2109.0,
+     "age_start": 23.34,
+     "age_end": 76.44,
+     "year_start": 1907.1,
+     "year_end": 1960.2,
      "canton": "Zurich"
     }
    ],
@@ -68,8 +52,8 @@
      "event": "MandatoryEduc",
      "age_start": 4.0,
      "age_end": 15.0,
-     "year_start": 2003.4,
-     "year_end": 2014.4,
+     "year_start": 1887.8,
+     "year_end": 1898.8,
      "kind": "education",
      "pathway": null,
      "institution": null,
@@ -80,8 +64,8 @@
      "event": "SecondaryEduc",
      "age_start": 15.0,
      "age_end": 19.0,
-     "year_start": 2014.4,
-     "year_end": 2018.4,
+     "year_start": 1898.8,
+     "year_end": 1902.8,
      "kind": "education",
      "pathway": "PSE",
      "institution": null,
@@ -90,138 +74,132 @@
     },
     {
      "event": "Work_1",
-     "age_start": 18.11,
-     "age_end": 20.11,
-     "year_start": 2017.5,
-     "year_end": 2019.5,
+     "age_start": 16.69,
+     "age_end": 19.25,
+     "year_start": 1900.5,
+     "year_end": 1903.0,
      "kind": "work",
-     "place_work": "Geneva",
-     "income": 2996
-    },
-    {
-     "event": "DL",
-     "age_start": 19.94,
-     "age_end": 109.63,
-     "year_start": 2019.3,
-     "year_end": 2109.0,
-     "kind": "licence",
-     "obtained_age": 19.94,
-     "obtained_year": 2019.3
+     "place_work": "Zug",
+     "income": 3026
     },
     {
      "event": "Work_2",
-     "age_start": 24.25,
-     "age_end": 26.92,
-     "year_start": 2023.6,
-     "year_end": 2026.3,
+     "age_start": 19.72,
+     "age_end": 21.02,
+     "year_start": 1903.5,
+     "year_end": 1904.8,
      "kind": "work",
-     "place_work": "Zurich",
-     "income": 2225
+     "place_work": "Zug",
+     "income": 3615
     },
     {
      "event": "Work_3",
-     "age_start": 31.05,
-     "age_end": 36.6,
-     "year_start": 2030.4,
-     "year_end": 2036.0,
+     "age_start": 22.33,
+     "age_end": 23.32,
+     "year_start": 1906.1,
+     "year_end": 1907.1,
      "kind": "work",
      "place_work": "Zurich",
-     "income": 4269
+     "income": 5692
     },
     {
      "event": "Work_4",
-     "age_start": 37.08,
-     "age_end": 46.4,
-     "year_start": 2036.5,
-     "year_end": 2045.8,
+     "age_start": 23.34,
+     "age_end": 23.96,
+     "year_start": 1907.1,
+     "year_end": 1907.7,
      "kind": "work",
      "place_work": "Zurich",
-     "income": 3769
-    },
-    {
-     "event": "Work_5",
-     "age_start": 47.36,
-     "age_end": 49.46,
-     "year_start": 2046.7,
-     "year_end": 2048.8,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 7582
-    },
-    {
-     "event": "Work_6",
-     "age_start": 49.63,
-     "age_end": 55.17,
-     "year_start": 2049.0,
-     "year_end": 2054.6,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 4199
+     "income": 4109
     }
    ],
-   "lifespan": 109.6
+   "lifespan": 76.4
   },
   {
-   "id": 72060,
-   "birth_year": 1864.9,
-   "sex": "Male",
-   "birth_canton": "LU",
+   "id": 59316,
+   "birth_year": 1909.8,
+   "sex": "Female",
+   "birth_canton": "ZH",
    "residence": [
     {
      "event": "Home0",
      "age_start": 0.0,
-     "age_end": 23.57,
-     "year_start": 1864.9,
-     "year_end": 1888.5,
-     "canton": "Vaud"
+     "age_end": 15.55,
+     "year_start": 1909.8,
+     "year_end": 1925.3,
+     "canton": "Zurich"
     },
     {
      "event": "Home_1",
-     "age_start": 23.57,
-     "age_end": 25.66,
-     "year_start": 1888.5,
-     "year_end": 1890.6,
-     "canton": "Vaud"
+     "age_start": 15.55,
+     "age_end": 22.04,
+     "year_start": 1925.3,
+     "year_end": 1931.8,
+     "canton": "Geneva"
     },
     {
      "event": "Home_2",
-     "age_start": 25.66,
-     "age_end": 31.85,
-     "year_start": 1890.6,
-     "year_end": 1896.8,
-     "canton": "Vaud"
+     "age_start": 22.04,
+     "age_end": 23.75,
+     "year_start": 1931.8,
+     "year_end": 1933.5,
+     "canton": "Fribourg"
     },
     {
      "event": "Home_3",
-     "age_start": 31.85,
-     "age_end": 42.21,
-     "year_start": 1896.8,
-     "year_end": 1907.1,
-     "canton": "Vaud"
+     "age_start": 23.75,
+     "age_end": 27.15,
+     "year_start": 1933.5,
+     "year_end": 1936.9,
+     "canton": "Zurich"
     },
     {
      "event": "Home_4",
-     "age_start": 42.21,
-     "age_end": 49.16,
-     "year_start": 1907.1,
-     "year_end": 1914.1,
-     "canton": "Vaud"
+     "age_start": 27.15,
+     "age_end": 30.09,
+     "year_start": 1936.9,
+     "year_end": 1939.9,
+     "canton": "Zurich"
     },
     {
      "event": "Home_5",
-     "age_start": 49.16,
-     "age_end": 58.84,
-     "year_start": 1914.1,
-     "year_end": 1923.7,
-     "canton": "Vaud"
+     "age_start": 30.09,
+     "age_end": 47.9,
+     "year_start": 1939.9,
+     "year_end": 1957.7,
+     "canton": "Zurich"
     },
     {
      "event": "Home_6",
-     "age_start": 58.84,
-     "age_end": 68.05,
-     "year_start": 1923.7,
-     "year_end": 1933.0,
-     "canton": "Vaud"
+     "age_start": 47.9,
+     "age_end": 53.31,
+     "year_start": 1957.7,
+     "year_end": 1963.1,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 53.31,
+     "age_end": 57.38,
+     "year_start": 1963.1,
+     "year_end": 1967.2,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 57.38,
+     "age_end": 61.79,
+     "year_start": 1967.2,
+     "year_end": 1971.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_9",
+     "age_start": 61.79,
+     "age_end": 104.37,
+     "year_start": 1971.6,
+     "year_end": 2014.2,
+     "canton": "Zurich"
     }
    ],
    "events": [
@@ -229,8 +207,8 @@
      "event": "MandatoryEduc",
      "age_start": 4.0,
      "age_end": 15.0,
-     "year_start": 1868.9,
-     "year_end": 1879.9,
+     "year_start": 1913.8,
+     "year_end": 1924.8,
      "kind": "education",
      "pathway": null,
      "institution": null,
@@ -240,1330 +218,497 @@
     {
      "event": "SecondaryEduc",
      "age_start": 15.0,
-     "age_end": 19.06,
-     "year_start": 1879.9,
-     "year_end": 1884.0,
+     "age_end": 19.0,
+     "year_start": 1924.8,
+     "year_end": 1928.8,
      "kind": "education",
-     "pathway": "ASE",
+     "pathway": "PSE",
      "institution": null,
      "level": null,
-     "title": "ECG"
-    },
-    {
-     "event": "TertiaryEduc",
-     "age_start": 19.44,
-     "age_end": 33.48,
-     "year_start": 1884.3,
-     "year_end": 1898.4,
-     "kind": "education",
-     "pathway": null,
-     "institution": "UNI_EPF",
-     "level": "Master",
-     "title": null
+     "title": "CFC"
     },
     {
      "event": "Work_1",
-     "age_start": 23.57,
-     "age_end": 23.94,
-     "year_start": 1888.5,
-     "year_end": 1888.8,
+     "age_start": 15.55,
+     "age_end": 18.67,
+     "year_start": 1925.3,
+     "year_end": 1928.5,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 29026
+     "place_work": "Geneva",
+     "income": 2780
     },
     {
      "event": "Work_2",
-     "age_start": 25.66,
-     "age_end": 29.09,
-     "year_start": 1890.6,
-     "year_end": 1894.0,
+     "age_start": 22.04,
+     "age_end": 23.56,
+     "year_start": 1931.8,
+     "year_end": 1933.3,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 31173
-    },
-    {
-     "event": "DL",
-     "age_start": 30.81,
-     "age_end": 68.05,
-     "year_start": 1895.7,
-     "year_end": 1933.0,
-     "kind": "licence",
-     "obtained_age": 30.81,
-     "obtained_year": 1895.7
+     "place_work": "Fribourg",
+     "income": 4229
     },
     {
      "event": "Work_3",
-     "age_start": 31.85,
-     "age_end": 41.81,
-     "year_start": 1896.8,
-     "year_end": 1906.7,
+     "age_start": 23.75,
+     "age_end": 24.12,
+     "year_start": 1933.5,
+     "year_end": 1933.9,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 28161
+     "place_work": "Zurich",
+     "income": 3289
     },
     {
      "event": "Work_4",
-     "age_start": 42.21,
-     "age_end": 46.58,
-     "year_start": 1907.1,
-     "year_end": 1911.5,
+     "age_start": 27.15,
+     "age_end": 27.95,
+     "year_start": 1936.9,
+     "year_end": 1937.7,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 34849
+     "place_work": "Zurich",
+     "income": 3832
     },
     {
      "event": "Work_5",
-     "age_start": 49.16,
-     "age_end": 56.75,
-     "year_start": 1914.1,
-     "year_end": 1921.7,
+     "age_start": 30.09,
+     "age_end": 47.33,
+     "year_start": 1939.9,
+     "year_end": 1957.1,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 39357
+     "place_work": "Zurich",
+     "income": 3839
+    },
+    {
+     "event": "DL",
+     "age_start": 37.72,
+     "age_end": 104.37,
+     "year_start": 1947.5,
+     "year_end": 2014.2,
+     "kind": "licence",
+     "obtained_age": 37.72,
+     "obtained_year": 1947.5
     },
     {
      "event": "Work_6",
-     "age_start": 58.84,
-     "age_end": 62.41,
-     "year_start": 1923.7,
-     "year_end": 1927.3,
+     "age_start": 47.9,
+     "age_end": 50.38,
+     "year_start": 1957.7,
+     "year_end": 1960.2,
      "kind": "work",
-     "place_work": "Vaud",
-     "income": 43119
+     "place_work": "Zurich",
+     "income": 3138
+    },
+    {
+     "event": "Work_7",
+     "age_start": 53.31,
+     "age_end": 57.31,
+     "year_start": 1963.1,
+     "year_end": 1967.1,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 8484
+    },
+    {
+     "event": "Work_8",
+     "age_start": 57.38,
+     "age_end": 60.21,
+     "year_start": 1967.2,
+     "year_end": 1970.0,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 4350
+    },
+    {
+     "event": "Work_9",
+     "age_start": 61.79,
+     "age_end": 63.39,
+     "year_start": 1971.6,
+     "year_end": 1973.2,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 7846
     }
    ],
-   "lifespan": 68.1
+   "lifespan": 104.4
   },
   {
-   "id": 3907,
-   "birth_year": 2003.4,
+   "id": 35854,
+   "birth_year": 2015.8,
+   "sex": "Male",
+   "birth_canton": "UR",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 21.15,
+     "year_start": 2015.8,
+     "year_end": 2036.9,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 21.15,
+     "age_end": 22.95,
+     "year_start": 2036.9,
+     "year_end": 2038.7,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 22.95,
+     "age_end": 26.37,
+     "year_start": 2038.7,
+     "year_end": 2042.2,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 26.37,
+     "age_end": 38.03,
+     "year_start": 2042.2,
+     "year_end": 2053.8,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 38.03,
+     "age_end": 57.26,
+     "year_start": 2053.8,
+     "year_end": 2073.1,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 57.26,
+     "age_end": 109.93,
+     "year_start": 2073.1,
+     "year_end": 2125.7,
+     "canton": "Aargau"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2019.8,
+     "year_end": 2030.8,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2030.8,
+     "year_end": 2034.8,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 21.15,
+     "age_end": 22.1,
+     "year_start": 2036.9,
+     "year_end": 2037.9,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 2052
+    },
+    {
+     "event": "Work_2",
+     "age_start": 22.95,
+     "age_end": 23.86,
+     "year_start": 2038.7,
+     "year_end": 2039.7,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 2877
+    },
+    {
+     "event": "DL",
+     "age_start": 23.35,
+     "age_end": 109.93,
+     "year_start": 2039.1,
+     "year_end": 2125.7,
+     "kind": "licence",
+     "obtained_age": 23.35,
+     "obtained_year": 2039.1
+    },
+    {
+     "event": "Work_3",
+     "age_start": 26.37,
+     "age_end": 33.5,
+     "year_start": 2042.2,
+     "year_end": 2049.3,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 4310
+    },
+    {
+     "event": "Work_4",
+     "age_start": 38.03,
+     "age_end": 54.04,
+     "year_start": 2053.8,
+     "year_end": 2069.8,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 4882
+    },
+    {
+     "event": "Work_5",
+     "age_start": 57.26,
+     "age_end": 63.37,
+     "year_start": 2073.1,
+     "year_end": 2079.2,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 5215
+    }
+   ],
+   "lifespan": 109.9
+  },
+  {
+   "id": 9734,
+   "birth_year": 1894.0,
    "sex": "Female",
+   "birth_canton": "GL",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 18.84,
+     "year_start": 1894.0,
+     "year_end": 1912.9,
+     "canton": "Valais"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 18.84,
+     "age_end": 22.33,
+     "year_start": 1912.9,
+     "year_end": 1916.4,
+     "canton": "Valais"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 22.33,
+     "age_end": 24.58,
+     "year_start": 1916.4,
+     "year_end": 1918.6,
+     "canton": "Valais"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 24.58,
+     "age_end": 25.21,
+     "year_start": 1918.6,
+     "year_end": 1919.2,
+     "canton": "Valais"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 25.21,
+     "age_end": 27.47,
+     "year_start": 1919.2,
+     "year_end": 1921.5,
+     "canton": "Valais"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 27.47,
+     "age_end": 31.49,
+     "year_start": 1921.5,
+     "year_end": 1925.5,
+     "canton": "Valais"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1898.0,
+     "year_end": 1909.0,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1909.0,
+     "year_end": 1913.0,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 18.84,
+     "age_end": 20.54,
+     "year_start": 1912.9,
+     "year_end": 1914.6,
+     "kind": "work",
+     "place_work": "Valais",
+     "income": 2981
+    },
+    {
+     "event": "Work_2",
+     "age_start": 22.33,
+     "age_end": 23.83,
+     "year_start": 1916.4,
+     "year_end": 1917.9,
+     "kind": "work",
+     "place_work": "Valais",
+     "income": 3466
+    },
+    {
+     "event": "DL",
+     "age_start": 22.81,
+     "age_end": 31.49,
+     "year_start": 1916.8,
+     "year_end": 1925.5,
+     "kind": "licence",
+     "obtained_age": 22.81,
+     "obtained_year": 1916.8
+    },
+    {
+     "event": "Work_3",
+     "age_start": 24.58,
+     "age_end": 24.82,
+     "year_start": 1918.6,
+     "year_end": 1918.9,
+     "kind": "work",
+     "place_work": "Valais",
+     "income": 3178
+    },
+    {
+     "event": "Work_4",
+     "age_start": 25.21,
+     "age_end": 27.3,
+     "year_start": 1919.2,
+     "year_end": 1921.3,
+     "kind": "work",
+     "place_work": "Valais",
+     "income": 4657
+    },
+    {
+     "event": "Work_5",
+     "age_start": 27.47,
+     "age_end": 30.14,
+     "year_start": 1921.5,
+     "year_end": 1924.2,
+     "kind": "work",
+     "place_work": "Valais",
+     "income": 4480
+    }
+   ],
+   "lifespan": 31.5
+  },
+  {
+   "id": 32419,
+   "birth_year": 2046.3,
+   "sex": "Male",
    "birth_canton": "BE",
    "residence": [
     {
      "event": "Home0",
      "age_start": 0.0,
-     "age_end": 17.46,
-     "year_start": 2003.4,
-     "year_end": 2020.9,
+     "age_end": 16.47,
+     "year_start": 2046.3,
+     "year_end": 2062.8,
      "canton": "Bern"
     },
     {
      "event": "Home_1",
-     "age_start": 17.46,
-     "age_end": 19.21,
-     "year_start": 2020.9,
-     "year_end": 2022.6,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 19.21,
-     "age_end": 26.9,
-     "year_start": 2022.6,
-     "year_end": 2030.3,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 26.9,
-     "age_end": 31.92,
-     "year_start": 2030.3,
-     "year_end": 2035.3,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 31.92,
-     "age_end": 35.02,
-     "year_start": 2035.3,
-     "year_end": 2038.4,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 35.02,
-     "age_end": 44.53,
-     "year_start": 2038.4,
-     "year_end": 2047.9,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_6",
-     "age_start": 44.53,
-     "age_end": 47.81,
-     "year_start": 2047.9,
-     "year_end": 2051.2,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_7",
-     "age_start": 47.81,
-     "age_end": 53.73,
-     "year_start": 2051.2,
-     "year_end": 2057.1,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_8",
-     "age_start": 53.73,
-     "age_end": 80.67,
-     "year_start": 2057.1,
-     "year_end": 2084.1,
-     "canton": "Bern"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 2007.4,
-     "year_end": 2018.4,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "SecondaryEduc",
-     "age_start": 15.0,
-     "age_end": 19.0,
-     "year_start": 2018.4,
-     "year_end": 2022.4,
-     "kind": "education",
-     "pathway": "PSE",
-     "institution": null,
-     "level": null,
-     "title": "CFC"
-    },
-    {
-     "event": "Work_1",
-     "age_start": 17.46,
-     "age_end": 18.93,
-     "year_start": 2020.9,
-     "year_end": 2022.3,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 3259
-    },
-    {
-     "event": "Work_2",
-     "age_start": 19.21,
-     "age_end": 26.38,
-     "year_start": 2022.6,
-     "year_end": 2029.8,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 2311
-    },
-    {
-     "event": "Work_3",
-     "age_start": 26.9,
-     "age_end": 29.92,
-     "year_start": 2030.3,
-     "year_end": 2033.3,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 2089
-    },
-    {
-     "event": "Work_4",
-     "age_start": 31.92,
-     "age_end": 33.95,
-     "year_start": 2035.3,
-     "year_end": 2037.4,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 2791
-    },
-    {
-     "event": "Work_5",
-     "age_start": 35.02,
-     "age_end": 44.09,
-     "year_start": 2038.4,
-     "year_end": 2047.5,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 7017
-    },
-    {
-     "event": "Work_6",
-     "age_start": 44.53,
-     "age_end": 47.79,
-     "year_start": 2047.9,
-     "year_end": 2051.2,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 4975
-    },
-    {
-     "event": "Work_7",
-     "age_start": 47.81,
-     "age_end": 53.38,
-     "year_start": 2051.2,
-     "year_end": 2056.8,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 4148
-    },
-    {
-     "event": "Work_8",
-     "age_start": 53.73,
-     "age_end": 63.96,
-     "year_start": 2057.1,
-     "year_end": 2067.4,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 4897
-    }
-   ],
-   "lifespan": 80.7
-  },
-  {
-   "id": 80696,
-   "birth_year": 1980.7,
-   "sex": "Female",
-   "birth_canton": "BS",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 20.58,
-     "year_start": 1980.7,
-     "year_end": 2001.2,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 20.58,
-     "age_end": 22.54,
-     "year_start": 2001.2,
-     "year_end": 2003.2,
-     "canton": "Thurgau"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 22.54,
-     "age_end": 24.09,
-     "year_start": 2003.2,
-     "year_end": 2004.7,
-     "canton": "Thurgau"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 24.09,
-     "age_end": 25.96,
-     "year_start": 2004.7,
-     "year_end": 2006.6,
-     "canton": "Thurgau"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 25.96,
-     "age_end": 29.1,
-     "year_start": 2006.6,
-     "year_end": 2009.8,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 29.1,
-     "age_end": 35.73,
-     "year_start": 2009.8,
-     "year_end": 2016.4,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_6",
-     "age_start": 35.73,
-     "age_end": 43.79,
-     "year_start": 2016.4,
-     "year_end": 2024.5,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_7",
-     "age_start": 43.79,
-     "age_end": 50.85,
-     "year_start": 2024.5,
-     "year_end": 2031.5,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_8",
-     "age_start": 50.85,
-     "age_end": 72.39,
-     "year_start": 2031.5,
-     "year_end": 2053.1,
-     "canton": "Zurich"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 1984.7,
-     "year_end": 1995.7,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "SecondaryEduc",
-     "age_start": 15.0,
-     "age_end": 19.25,
-     "year_start": 1995.7,
-     "year_end": 1999.9,
-     "kind": "education",
-     "pathway": "ASE",
-     "institution": null,
-     "level": null,
-     "title": "Maturite"
-    },
-    {
-     "event": "TertiaryEduc",
-     "age_start": 19.55,
-     "age_end": 20.97,
-     "year_start": 2000.2,
-     "year_end": 2001.6,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "Work_1",
-     "age_start": 20.58,
-     "age_end": 22.02,
-     "year_start": 2001.2,
-     "year_end": 2002.7,
-     "kind": "work",
-     "place_work": "Thurgau",
-     "income": 4118
-    },
-    {
-     "event": "Work_2",
-     "age_start": 22.54,
-     "age_end": 24.0,
-     "year_start": 2003.2,
-     "year_end": 2004.7,
-     "kind": "work",
-     "place_work": "Thurgau",
-     "income": 6281
-    },
-    {
-     "event": "Work_3",
-     "age_start": 24.09,
-     "age_end": 25.06,
-     "year_start": 2004.7,
-     "year_end": 2005.7,
-     "kind": "work",
-     "place_work": "Thurgau",
-     "income": 4552
-    },
-    {
-     "event": "Work_4",
-     "age_start": 25.96,
-     "age_end": 28.85,
-     "year_start": 2006.6,
-     "year_end": 2009.5,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 4882
-    },
-    {
-     "event": "Work_5",
-     "age_start": 29.1,
-     "age_end": 34.78,
-     "year_start": 2009.8,
-     "year_end": 2015.4,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 6013
-    },
-    {
-     "event": "Work_6",
-     "age_start": 35.73,
-     "age_end": 43.46,
-     "year_start": 2016.4,
-     "year_end": 2024.1,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 7063
-    },
-    {
-     "event": "Work_7",
-     "age_start": 43.79,
-     "age_end": 50.36,
-     "year_start": 2024.5,
-     "year_end": 2031.0,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 6548
-    },
-    {
-     "event": "Work_8",
-     "age_start": 50.85,
-     "age_end": 55.54,
-     "year_start": 2031.5,
-     "year_end": 2036.2,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 7936
-    }
-   ],
-   "lifespan": 72.4
-  },
-  {
-   "id": 37378,
-   "birth_year": 1896.4,
-   "sex": "Female",
-   "birth_canton": "UR",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 16.43,
-     "year_start": 1896.4,
-     "year_end": 1912.8,
-     "canton": "Aargau"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 16.43,
-     "age_end": 17.31,
-     "year_start": 1912.8,
-     "year_end": 1913.7,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 17.31,
-     "age_end": 21.91,
-     "year_start": 1913.7,
-     "year_end": 1918.3,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 21.91,
-     "age_end": 27.68,
-     "year_start": 1918.3,
-     "year_end": 1924.1,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 27.68,
-     "age_end": 35.96,
-     "year_start": 1924.1,
-     "year_end": 1932.4,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 35.96,
-     "age_end": 47.34,
-     "year_start": 1932.4,
-     "year_end": 1943.8,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_6",
-     "age_start": 47.34,
-     "age_end": 51.23,
-     "year_start": 1943.8,
-     "year_end": 1947.6,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_7",
-     "age_start": 51.23,
-     "age_end": 53.22,
-     "year_start": 1947.6,
-     "year_end": 1949.6,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_8",
-     "age_start": 53.22,
-     "age_end": 58.64,
-     "year_start": 1949.6,
-     "year_end": 1955.0,
-     "canton": "Zurich"
-    },
-    {
-     "event": "Home_9",
-     "age_start": 58.64,
-     "age_end": 89.29,
-     "year_start": 1955.0,
-     "year_end": 1985.7,
-     "canton": "Zurich"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 1900.4,
-     "year_end": 1911.4,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "Work_1",
-     "age_start": 16.43,
-     "age_end": 16.77,
-     "year_start": 1912.8,
-     "year_end": 1913.2,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 1710
-    },
-    {
-     "event": "Work_2",
-     "age_start": 17.31,
-     "age_end": 20.65,
-     "year_start": 1913.7,
-     "year_end": 1917.1,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 2662
-    },
-    {
-     "event": "Work_3",
-     "age_start": 21.91,
-     "age_end": 27.19,
-     "year_start": 1918.3,
-     "year_end": 1923.6,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 1292
-    },
-    {
-     "event": "Work_4",
-     "age_start": 27.68,
-     "age_end": 35.48,
-     "year_start": 1924.1,
-     "year_end": 1931.9,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 2147
-    },
-    {
-     "event": "Work_5",
-     "age_start": 35.96,
-     "age_end": 46.57,
-     "year_start": 1932.4,
-     "year_end": 1943.0,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 4743
-    },
-    {
-     "event": "Work_6",
-     "age_start": 47.34,
-     "age_end": 50.33,
-     "year_start": 1943.8,
-     "year_end": 1946.7,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 4639
-    },
-    {
-     "event": "Work_7",
-     "age_start": 51.23,
-     "age_end": 52.53,
-     "year_start": 1947.6,
-     "year_end": 1948.9,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 3267
-    },
-    {
-     "event": "Work_8",
-     "age_start": 53.22,
-     "age_end": 55.53,
-     "year_start": 1949.6,
-     "year_end": 1951.9,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 2669
-    },
-    {
-     "event": "Work_9",
-     "age_start": 58.64,
-     "age_end": 63.03,
-     "year_start": 1955.0,
-     "year_end": 1959.4,
-     "kind": "work",
-     "place_work": "Zurich",
-     "income": 3692
-    }
-   ],
-   "lifespan": 89.3
-  },
-  {
-   "id": 85656,
-   "birth_year": 1966.2,
-   "sex": "Male",
-   "birth_canton": "LU",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 19.59,
-     "year_start": 1966.2,
-     "year_end": 1985.7,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 19.59,
-     "age_end": 20.91,
-     "year_start": 1985.7,
-     "year_end": 1987.1,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 20.91,
-     "age_end": 22.84,
-     "year_start": 1987.1,
-     "year_end": 1989.0,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 22.84,
-     "age_end": 25.25,
-     "year_start": 1989.0,
-     "year_end": 1991.4,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 25.25,
-     "age_end": 28.13,
-     "year_start": 1991.4,
-     "year_end": 1994.3,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 28.13,
-     "age_end": 37.87,
-     "year_start": 1994.3,
-     "year_end": 2004.0,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_6",
-     "age_start": 37.87,
-     "age_end": 38.34,
-     "year_start": 2004.0,
-     "year_end": 2004.5,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_7",
-     "age_start": 38.34,
-     "age_end": 47.45,
-     "year_start": 2004.5,
-     "year_end": 2013.6,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_8",
-     "age_start": 47.45,
-     "age_end": 47.92,
-     "year_start": 2013.6,
-     "year_end": 2014.1,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_9",
-     "age_start": 47.92,
-     "age_end": 88.84,
-     "year_start": 2014.1,
-     "year_end": 2055.0,
-     "canton": "Vaud"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 1970.2,
-     "year_end": 1981.2,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "SecondaryEduc",
-     "age_start": 15.0,
-     "age_end": 19.0,
-     "year_start": 1981.2,
-     "year_end": 1985.2,
-     "kind": "education",
-     "pathway": "PSE",
-     "institution": null,
-     "level": null,
-     "title": "CFC"
-    },
-    {
-     "event": "Work_1",
-     "age_start": 19.59,
-     "age_end": 19.76,
-     "year_start": 1985.7,
-     "year_end": 1985.9,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 5070
-    },
-    {
-     "event": "Work_2",
-     "age_start": 20.91,
-     "age_end": 20.99,
-     "year_start": 1987.1,
-     "year_end": 1987.2,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 6148
-    },
-    {
-     "event": "Work_3",
-     "age_start": 22.84,
-     "age_end": 24.71,
-     "year_start": 1989.0,
-     "year_end": 1990.9,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 2104
-    },
-    {
-     "event": "Work_4",
-     "age_start": 25.25,
-     "age_end": 26.9,
-     "year_start": 1991.4,
-     "year_end": 1993.1,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 1517
-    },
-    {
-     "event": "Work_5",
-     "age_start": 28.13,
-     "age_end": 35.31,
-     "year_start": 1994.3,
-     "year_end": 2001.5,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 4730
-    },
-    {
-     "event": "DL",
-     "age_start": 36.04,
-     "age_end": 88.84,
-     "year_start": 2002.2,
-     "year_end": 2055.0,
-     "kind": "licence",
-     "obtained_age": 36.04,
-     "obtained_year": 2002.2
-    },
-    {
-     "event": "Work_6",
-     "age_start": 37.87,
-     "age_end": 37.91,
-     "year_start": 2004.0,
-     "year_end": 2004.1,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 6357
-    },
-    {
-     "event": "Work_7",
-     "age_start": 38.34,
-     "age_end": 46.12,
-     "year_start": 2004.5,
-     "year_end": 2012.3,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 6140
-    },
-    {
-     "event": "Work_8",
-     "age_start": 47.45,
-     "age_end": 47.48,
-     "year_start": 2013.6,
-     "year_end": 2013.6,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 3878
-    },
-    {
-     "event": "Work_9",
-     "age_start": 47.92,
-     "age_end": 51.35,
-     "year_start": 2014.1,
-     "year_end": 2017.5,
-     "kind": "work",
-     "place_work": "Neuchatel",
-     "income": 4048
-    }
-   ],
-   "lifespan": 88.8
-  },
-  {
-   "id": 30166,
-   "birth_year": 1908.7,
-   "sex": "Male",
-   "birth_canton": "NW",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 22.21,
-     "year_start": 1908.7,
-     "year_end": 1930.9,
-     "canton": "Lucerne"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 22.21,
-     "age_end": 26.29,
-     "year_start": 1930.9,
-     "year_end": 1935.0,
-     "canton": "Lucerne"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 26.29,
-     "age_end": 33.74,
-     "year_start": 1935.0,
-     "year_end": 1942.4,
-     "canton": "Lucerne"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 33.74,
-     "age_end": 35.03,
-     "year_start": 1942.4,
-     "year_end": 1943.7,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 35.03,
-     "age_end": 40.1,
-     "year_start": 1943.7,
-     "year_end": 1948.8,
-     "canton": "Bern"
-    },
-    {
-     "event": "Home_5",
-     "age_start": 40.1,
-     "age_end": 83.74,
-     "year_start": 1948.8,
-     "year_end": 1992.4,
-     "canton": "Schwyz"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 1912.7,
-     "year_end": 1923.7,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "SecondaryEduc",
-     "age_start": 15.0,
-     "age_end": 19.91,
-     "year_start": 1923.7,
-     "year_end": 1928.6,
-     "kind": "education",
-     "pathway": "ASE",
-     "institution": null,
-     "level": null,
-     "title": "Maturite"
-    },
-    {
-     "event": "TertiaryEduc",
-     "age_start": 21.42,
-     "age_end": 32.39,
-     "year_start": 1930.1,
-     "year_end": 1941.1,
-     "kind": "education",
-     "pathway": null,
-     "institution": "HES_HEP",
-     "level": "Bachelor",
-     "title": null
-    },
-    {
-     "event": "Work_1",
-     "age_start": 22.21,
-     "age_end": 26.23,
-     "year_start": 1930.9,
-     "year_end": 1934.9,
-     "kind": "work",
-     "place_work": "Lucerne",
-     "income": 14429
-    },
-    {
-     "event": "Work_2",
-     "age_start": 26.29,
-     "age_end": 29.53,
-     "year_start": 1935.0,
-     "year_end": 1938.2,
-     "kind": "work",
-     "place_work": "Lucerne",
-     "income": 19234
-    },
-    {
-     "event": "DL",
-     "age_start": 27.11,
-     "age_end": 83.74,
-     "year_start": 1935.8,
-     "year_end": 1992.4,
-     "kind": "licence",
-     "obtained_age": 27.11,
-     "obtained_year": 1935.8
-    },
-    {
-     "event": "Work_3",
-     "age_start": 33.74,
-     "age_end": 34.65,
-     "year_start": 1942.4,
-     "year_end": 1943.3,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 26159
-    },
-    {
-     "event": "Work_4",
-     "age_start": 35.03,
-     "age_end": 37.75,
-     "year_start": 1943.7,
-     "year_end": 1946.4,
-     "kind": "work",
-     "place_work": "Bern",
-     "income": 21139
-    },
-    {
-     "event": "Work_5",
-     "age_start": 40.1,
-     "age_end": 61.84,
-     "year_start": 1948.8,
-     "year_end": 1970.5,
-     "kind": "work",
-     "place_work": "Schwyz",
-     "income": 20246
-    }
-   ],
-   "lifespan": 83.7
-  },
-  {
-   "id": 9819,
-   "birth_year": 2021.1,
-   "sex": "Female",
-   "birth_canton": "UR",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 18.7,
-     "year_start": 2021.1,
-     "year_end": 2039.8,
-     "canton": "Aargau"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 18.7,
-     "age_end": 20.0,
-     "year_start": 2039.8,
-     "year_end": 2041.1,
+     "age_start": 16.47,
+     "age_end": 20.49,
+     "year_start": 2062.8,
+     "year_end": 2066.8,
      "canton": "Aargau"
     },
     {
      "event": "Home_2",
-     "age_start": 20.0,
-     "age_end": 20.73,
-     "year_start": 2041.1,
-     "year_end": 2041.8,
-     "canton": "Aargau"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 20.73,
-     "age_end": 28.6,
-     "year_start": 2041.8,
-     "year_end": 2049.7,
-     "canton": "Aargau"
-    },
-    {
-     "event": "Home_4",
-     "age_start": 28.6,
-     "age_end": 85.05,
-     "year_start": 2049.7,
-     "year_end": 2106.1,
-     "canton": "Aargau"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 2025.1,
-     "year_end": 2036.1,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "SecondaryEduc",
-     "age_start": 15.0,
-     "age_end": 19.0,
-     "year_start": 2036.1,
-     "year_end": 2040.1,
-     "kind": "education",
-     "pathway": "PSE",
-     "institution": null,
-     "level": null,
-     "title": "CFC"
-    },
-    {
-     "event": "Work_1",
-     "age_start": 18.7,
-     "age_end": 19.28,
-     "year_start": 2039.8,
-     "year_end": 2040.4,
-     "kind": "work",
-     "place_work": "Aargau",
-     "income": 1525
-    },
-    {
-     "event": "Work_2",
-     "age_start": 20.0,
-     "age_end": 20.42,
-     "year_start": 2041.1,
-     "year_end": 2041.5,
-     "kind": "work",
-     "place_work": "Aargau",
-     "income": 3910
-    },
-    {
-     "event": "Work_3",
-     "age_start": 20.73,
-     "age_end": 26.32,
-     "year_start": 2041.8,
-     "year_end": 2047.4,
-     "kind": "work",
-     "place_work": "Aargau",
-     "income": 3688
-    },
-    {
-     "event": "DL",
-     "age_start": 22.81,
-     "age_end": 85.05,
-     "year_start": 2043.9,
-     "year_end": 2106.1,
-     "kind": "licence",
-     "obtained_age": 22.81,
-     "obtained_year": 2043.9
-    },
-    {
-     "event": "Work_4",
-     "age_start": 28.6,
-     "age_end": 30.76,
-     "year_start": 2049.7,
-     "year_end": 2051.8,
-     "kind": "work",
-     "place_work": "Aargau",
-     "income": 3527
-    }
-   ],
-   "lifespan": 85.1
-  },
-  {
-   "id": 35582,
-   "birth_year": 2008.6,
-   "sex": "Female",
-   "birth_canton": "LU",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 17.48,
-     "year_start": 2008.6,
-     "year_end": 2026.1,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 17.48,
+     "age_start": 20.49,
      "age_end": 22.05,
-     "year_start": 2026.1,
-     "year_end": 2030.6,
-     "canton": "Vaud"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 22.05,
-     "age_end": 23.34,
-     "year_start": 2030.6,
-     "year_end": 2031.9,
-     "canton": "Vaud"
+     "year_start": 2066.8,
+     "year_end": 2068.4,
+     "canton": "Bern"
     },
     {
      "event": "Home_3",
-     "age_start": 23.34,
-     "age_end": 107.45,
-     "year_start": 2031.9,
-     "year_end": 2116.0,
-     "canton": "Vaud"
-    }
-   ],
-   "events": [
-    {
-     "event": "MandatoryEduc",
-     "age_start": 4.0,
-     "age_end": 15.0,
-     "year_start": 2012.6,
-     "year_end": 2023.6,
-     "kind": "education",
-     "pathway": null,
-     "institution": null,
-     "level": null,
-     "title": null
-    },
-    {
-     "event": "Work_1",
-     "age_start": 17.48,
-     "age_end": 19.3,
-     "year_start": 2026.1,
-     "year_end": 2027.9,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 1297
-    },
-    {
-     "event": "DL",
-     "age_start": 21.6,
-     "age_end": 107.45,
-     "year_start": 2030.2,
-     "year_end": 2116.0,
-     "kind": "licence",
-     "obtained_age": 21.6,
-     "obtained_year": 2030.2
-    },
-    {
-     "event": "Work_2",
      "age_start": 22.05,
-     "age_end": 22.96,
-     "year_start": 2030.6,
-     "year_end": 2031.5,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 1788
-    },
-    {
-     "event": "Work_3",
-     "age_start": 23.34,
-     "age_end": 23.75,
-     "year_start": 2031.9,
-     "year_end": 2032.3,
-     "kind": "work",
-     "place_work": "Vaud",
-     "income": 3780
-    }
-   ],
-   "lifespan": 107.5
-  },
-  {
-   "id": 77194,
-   "birth_year": 1869.1,
-   "sex": "Female",
-   "birth_canton": "AG",
-   "residence": [
-    {
-     "event": "Home0",
-     "age_start": 0.0,
-     "age_end": 18.85,
-     "year_start": 1869.1,
-     "year_end": 1888.0,
-     "canton": "Schaffhausen"
-    },
-    {
-     "event": "Home_1",
-     "age_start": 18.85,
-     "age_end": 19.27,
-     "year_start": 1888.0,
-     "year_end": 1888.4,
-     "canton": "Schaffhausen"
-    },
-    {
-     "event": "Home_2",
-     "age_start": 19.27,
-     "age_end": 24.8,
-     "year_start": 1888.4,
-     "year_end": 1893.9,
-     "canton": "Schaffhausen"
-    },
-    {
-     "event": "Home_3",
-     "age_start": 24.8,
-     "age_end": 25.45,
-     "year_start": 1893.9,
-     "year_end": 1894.6,
-     "canton": "Schaffhausen"
+     "age_end": 27.85,
+     "year_start": 2068.4,
+     "year_end": 2074.2,
+     "canton": "Bern"
     },
     {
      "event": "Home_4",
-     "age_start": 25.45,
-     "age_end": 42.4,
-     "year_start": 1894.6,
-     "year_end": 1911.5,
-     "canton": "Schaffhausen"
+     "age_start": 27.85,
+     "age_end": 28.17,
+     "year_start": 2074.2,
+     "year_end": 2074.5,
+     "canton": "Bern"
     },
     {
      "event": "Home_5",
-     "age_start": 42.4,
-     "age_end": 44.31,
-     "year_start": 1911.5,
-     "year_end": 1913.4,
-     "canton": "Schaffhausen"
+     "age_start": 28.17,
+     "age_end": 41.15,
+     "year_start": 2074.5,
+     "year_end": 2087.5,
+     "canton": "Bern"
     },
     {
      "event": "Home_6",
-     "age_start": 44.31,
-     "age_end": 64.13,
-     "year_start": 1913.4,
-     "year_end": 1933.2,
-     "canton": "Schaffhausen"
+     "age_start": 41.15,
+     "age_end": 43.33,
+     "year_start": 2087.5,
+     "year_end": 2089.6,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 43.33,
+     "age_end": 48.12,
+     "year_start": 2089.6,
+     "year_end": 2094.4,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_8",
+     "age_start": 48.12,
+     "age_end": 55.97,
+     "year_start": 2094.4,
+     "year_end": 2102.3,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_9",
+     "age_start": 55.97,
+     "age_end": 57.72,
+     "year_start": 2102.3,
+     "year_end": 2104.0,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_10",
+     "age_start": 57.72,
+     "age_end": 58.08,
+     "year_start": 2104.0,
+     "year_end": 2104.4,
+     "canton": "Bern"
     }
    ],
    "events": [
@@ -1571,8 +716,8 @@
      "event": "MandatoryEduc",
      "age_start": 4.0,
      "age_end": 15.0,
-     "year_start": 1873.1,
-     "year_end": 1884.1,
+     "year_start": 2050.3,
+     "year_end": 2061.3,
      "kind": "education",
      "pathway": null,
      "institution": null,
@@ -1583,8 +728,8 @@
      "event": "SecondaryEduc",
      "age_start": 15.0,
      "age_end": 19.0,
-     "year_start": 1884.1,
-     "year_end": 1888.1,
+     "year_start": 2061.3,
+     "year_end": 2065.3,
      "kind": "education",
      "pathway": "PSE",
      "institution": null,
@@ -1593,76 +738,777 @@
     },
     {
      "event": "Work_1",
-     "age_start": 18.85,
-     "age_end": 18.86,
-     "year_start": 1888.0,
-     "year_end": 1888.0,
+     "age_start": 16.47,
+     "age_end": 17.99,
+     "year_start": 2062.8,
+     "year_end": 2064.3,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 3618
+     "place_work": "Aargau",
+     "income": 5001
     },
     {
      "event": "Work_2",
-     "age_start": 19.27,
-     "age_end": 22.73,
-     "year_start": 1888.4,
-     "year_end": 1891.8,
+     "age_start": 20.49,
+     "age_end": 21.01,
+     "year_start": 2066.8,
+     "year_end": 2067.3,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 3762
-    },
-    {
-     "event": "DL",
-     "age_start": 21.23,
-     "age_end": 64.13,
-     "year_start": 1890.3,
-     "year_end": 1933.2,
-     "kind": "licence",
-     "obtained_age": 21.23,
-     "obtained_year": 1890.3
+     "place_work": "Bern",
+     "income": 3796
     },
     {
      "event": "Work_3",
-     "age_start": 24.8,
-     "age_end": 24.93,
-     "year_start": 1893.9,
-     "year_end": 1894.0,
+     "age_start": 22.05,
+     "age_end": 26.05,
+     "year_start": 2068.4,
+     "year_end": 2072.4,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 3381
+     "place_work": "Basel_Landschaft",
+     "income": 2836
     },
     {
      "event": "Work_4",
-     "age_start": 25.45,
-     "age_end": 40.31,
-     "year_start": 1894.6,
-     "year_end": 1909.4,
+     "age_start": 27.85,
+     "age_end": 28.06,
+     "year_start": 2074.2,
+     "year_end": 2074.4,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 2412
+     "place_work": "Basel_Landschaft",
+     "income": 3658
+    },
+    {
+     "event": "DL",
+     "age_start": 28.08,
+     "age_end": 58.08,
+     "year_start": 2074.4,
+     "year_end": 2104.4,
+     "kind": "licence",
+     "obtained_age": 28.08,
+     "obtained_year": 2074.4
     },
     {
      "event": "Work_5",
-     "age_start": 42.4,
-     "age_end": 43.76,
-     "year_start": 1911.5,
-     "year_end": 1912.9,
+     "age_start": 28.17,
+     "age_end": 40.92,
+     "year_start": 2074.5,
+     "year_end": 2087.2,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 4764
+     "place_work": "Basel_Landschaft",
+     "income": 3176
     },
     {
      "event": "Work_6",
-     "age_start": 44.31,
-     "age_end": 44.41,
-     "year_start": 1913.4,
-     "year_end": 1913.5,
+     "age_start": 41.15,
+     "age_end": 43.23,
+     "year_start": 2087.5,
+     "year_end": 2089.5,
      "kind": "work",
-     "place_work": "Schaffhausen",
-     "income": 3856
+     "place_work": "Basel_Landschaft",
+     "income": 3768
+    },
+    {
+     "event": "Work_7",
+     "age_start": 43.33,
+     "age_end": 44.52,
+     "year_start": 2089.6,
+     "year_end": 2090.8,
+     "kind": "work",
+     "place_work": "Basel_Landschaft",
+     "income": 5234
+    },
+    {
+     "event": "Work_8",
+     "age_start": 48.12,
+     "age_end": 55.63,
+     "year_start": 2094.4,
+     "year_end": 2101.9,
+     "kind": "work",
+     "place_work": "Basel_Landschaft",
+     "income": 2192
+    },
+    {
+     "event": "Work_9",
+     "age_start": 55.97,
+     "age_end": 57.54,
+     "year_start": 2102.3,
+     "year_end": 2103.9,
+     "kind": "work",
+     "place_work": "Basel_Landschaft",
+     "income": 5109
+    },
+    {
+     "event": "Work_10",
+     "age_start": 57.72,
+     "age_end": 57.87,
+     "year_start": 2104.0,
+     "year_end": 2104.2,
+     "kind": "work",
+     "place_work": "Basel_Landschaft",
+     "income": 9058
     }
    ],
-   "lifespan": 64.1
+   "lifespan": 58.1
+  },
+  {
+   "id": 1402,
+   "birth_year": 2033.3,
+   "sex": "Male",
+   "birth_canton": "ZH",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 19.57,
+     "year_start": 2033.3,
+     "year_end": 2052.9,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 19.57,
+     "age_end": 26.59,
+     "year_start": 2052.9,
+     "year_end": 2059.9,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 26.59,
+     "age_end": 35.29,
+     "year_start": 2059.9,
+     "year_end": 2068.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 35.29,
+     "age_end": 102.71,
+     "year_start": 2068.6,
+     "year_end": 2136.0,
+     "canton": "Zurich"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2037.3,
+     "year_end": 2048.3,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2048.3,
+     "year_end": 2052.3,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 19.57,
+     "age_end": 24.32,
+     "year_start": 2052.9,
+     "year_end": 2057.6,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 2958
+    },
+    {
+     "event": "DL",
+     "age_start": 23.8,
+     "age_end": 102.71,
+     "year_start": 2057.1,
+     "year_end": 2136.0,
+     "kind": "licence",
+     "obtained_age": 23.8,
+     "obtained_year": 2057.1
+    },
+    {
+     "event": "Work_2",
+     "age_start": 26.59,
+     "age_end": 34.23,
+     "year_start": 2059.9,
+     "year_end": 2067.5,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 3971
+    },
+    {
+     "event": "Work_3",
+     "age_start": 35.29,
+     "age_end": 47.01,
+     "year_start": 2068.6,
+     "year_end": 2080.3,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 4122
+    }
+   ],
+   "lifespan": 102.7
+  },
+  {
+   "id": 74762,
+   "birth_year": 1968.8,
+   "sex": "Male",
+   "birth_canton": "BE",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 17.38,
+     "year_start": 1968.8,
+     "year_end": 1986.2,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 17.38,
+     "age_end": 19.32,
+     "year_start": 1986.2,
+     "year_end": 1988.1,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 19.32,
+     "age_end": 23.9,
+     "year_start": 1988.1,
+     "year_end": 1992.7,
+     "canton": "Vaud"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 23.9,
+     "age_end": 88.86,
+     "year_start": 1992.7,
+     "year_end": 2057.7,
+     "canton": "Vaud"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1972.8,
+     "year_end": 1983.8,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1983.8,
+     "year_end": 1987.8,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 17.38,
+     "age_end": 18.81,
+     "year_start": 1986.2,
+     "year_end": 1987.6,
+     "kind": "work",
+     "place_work": "Vaud",
+     "income": 2350
+    },
+    {
+     "event": "Work_2",
+     "age_start": 19.32,
+     "age_end": 23.27,
+     "year_start": 1988.1,
+     "year_end": 1992.1,
+     "kind": "work",
+     "place_work": "Vaud",
+     "income": 2017
+    },
+    {
+     "event": "DL",
+     "age_start": 19.98,
+     "age_end": 88.86,
+     "year_start": 1988.8,
+     "year_end": 2057.7,
+     "kind": "licence",
+     "obtained_age": 19.98,
+     "obtained_year": 1988.8
+    },
+    {
+     "event": "Work_3",
+     "age_start": 23.9,
+     "age_end": 25.87,
+     "year_start": 1992.7,
+     "year_end": 1994.7,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 4069
+    }
+   ],
+   "lifespan": 88.9
+  },
+  {
+   "id": 58673,
+   "birth_year": 1863.8,
+   "sex": "Female",
+   "birth_canton": "ZH",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 15.95,
+     "year_start": 1863.8,
+     "year_end": 1879.7,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 15.95,
+     "age_end": 16.16,
+     "year_start": 1879.7,
+     "year_end": 1879.9,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 16.16,
+     "age_end": 21.4,
+     "year_start": 1879.9,
+     "year_end": 1885.2,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 21.4,
+     "age_end": 25.81,
+     "year_start": 1885.2,
+     "year_end": 1889.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 25.81,
+     "age_end": 80.02,
+     "year_start": 1889.6,
+     "year_end": 1943.8,
+     "canton": "Bern"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1867.8,
+     "year_end": 1878.8,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1878.8,
+     "year_end": 1882.8,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 15.95,
+     "age_end": 16.01,
+     "year_start": 1879.7,
+     "year_end": 1879.8,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 4680
+    },
+    {
+     "event": "Work_2",
+     "age_start": 16.16,
+     "age_end": 18.66,
+     "year_start": 1879.9,
+     "year_end": 1882.4,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 2808
+    },
+    {
+     "event": "DL",
+     "age_start": 20.81,
+     "age_end": 80.02,
+     "year_start": 1884.6,
+     "year_end": 1943.8,
+     "kind": "licence",
+     "obtained_age": 20.81,
+     "obtained_year": 1884.6
+    },
+    {
+     "event": "Work_3",
+     "age_start": 21.4,
+     "age_end": 25.13,
+     "year_start": 1885.2,
+     "year_end": 1888.9,
+     "kind": "work",
+     "place_work": "Zurich",
+     "income": 3113
+    },
+    {
+     "event": "Work_4",
+     "age_start": 25.81,
+     "age_end": 29.29,
+     "year_start": 1889.6,
+     "year_end": 1893.1,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 6717
+    }
+   ],
+   "lifespan": 80.0
+  },
+  {
+   "id": 55019,
+   "birth_year": 2028.7,
+   "sex": "Male",
+   "birth_canton": "BE",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 17.11,
+     "year_start": 2028.7,
+     "year_end": 2045.8,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 17.11,
+     "age_end": 24.8,
+     "year_start": 2045.8,
+     "year_end": 2053.5,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 24.8,
+     "age_end": 30.34,
+     "year_start": 2053.5,
+     "year_end": 2059.1,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 30.34,
+     "age_end": 35.41,
+     "year_start": 2059.1,
+     "year_end": 2064.1,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 35.41,
+     "age_end": 39.27,
+     "year_start": 2064.1,
+     "year_end": 2068.0,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 39.27,
+     "age_end": 44.45,
+     "year_start": 2068.0,
+     "year_end": 2073.2,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_6",
+     "age_start": 44.45,
+     "age_end": 57.46,
+     "year_start": 2073.2,
+     "year_end": 2086.2,
+     "canton": "Bern"
+    },
+    {
+     "event": "Home_7",
+     "age_start": 57.46,
+     "age_end": 100.26,
+     "year_start": 2086.2,
+     "year_end": 2129.0,
+     "canton": "Bern"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 2032.7,
+     "year_end": 2043.7,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 2043.7,
+     "year_end": 2047.7,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 17.11,
+     "age_end": 24.04,
+     "year_start": 2045.8,
+     "year_end": 2052.8,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 2757
+    },
+    {
+     "event": "DL",
+     "age_start": 23.73,
+     "age_end": 100.26,
+     "year_start": 2052.5,
+     "year_end": 2129.0,
+     "kind": "licence",
+     "obtained_age": 23.73,
+     "obtained_year": 2052.5
+    },
+    {
+     "event": "Work_2",
+     "age_start": 24.8,
+     "age_end": 29.9,
+     "year_start": 2053.5,
+     "year_end": 2058.6,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 4067
+    },
+    {
+     "event": "Work_3",
+     "age_start": 30.34,
+     "age_end": 32.52,
+     "year_start": 2059.1,
+     "year_end": 2061.2,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 4797
+    },
+    {
+     "event": "Work_4",
+     "age_start": 35.41,
+     "age_end": 38.97,
+     "year_start": 2064.1,
+     "year_end": 2067.7,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 3737
+    },
+    {
+     "event": "Work_5",
+     "age_start": 39.27,
+     "age_end": 43.25,
+     "year_start": 2068.0,
+     "year_end": 2072.0,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 4352
+    },
+    {
+     "event": "Work_6",
+     "age_start": 44.45,
+     "age_end": 56.74,
+     "year_start": 2073.2,
+     "year_end": 2085.5,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 4769
+    },
+    {
+     "event": "Work_7",
+     "age_start": 57.46,
+     "age_end": 59.59,
+     "year_start": 2086.2,
+     "year_end": 2088.3,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 2903
+    }
+   ],
+   "lifespan": 100.3
+  },
+  {
+   "id": 41753,
+   "birth_year": 1952.2,
+   "sex": "Female",
+   "birth_canton": "ZH",
+   "residence": [
+    {
+     "event": "Home0",
+     "age_start": 0.0,
+     "age_end": 17.45,
+     "year_start": 1952.2,
+     "year_end": 1969.6,
+     "canton": "Zurich"
+    },
+    {
+     "event": "Home_1",
+     "age_start": 17.45,
+     "age_end": 19.7,
+     "year_start": 1969.6,
+     "year_end": 1971.9,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_2",
+     "age_start": 19.7,
+     "age_end": 20.51,
+     "year_start": 1971.9,
+     "year_end": 1972.7,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_3",
+     "age_start": 20.51,
+     "age_end": 22.6,
+     "year_start": 1972.7,
+     "year_end": 1974.8,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_4",
+     "age_start": 22.6,
+     "age_end": 28.76,
+     "year_start": 1974.8,
+     "year_end": 1981.0,
+     "canton": "Aargau"
+    },
+    {
+     "event": "Home_5",
+     "age_start": 28.76,
+     "age_end": 83.58,
+     "year_start": 1981.0,
+     "year_end": 2035.8,
+     "canton": "Aargau"
+    }
+   ],
+   "events": [
+    {
+     "event": "MandatoryEduc",
+     "age_start": 4.0,
+     "age_end": 15.0,
+     "year_start": 1956.2,
+     "year_end": 1967.2,
+     "kind": "education",
+     "pathway": null,
+     "institution": null,
+     "level": null,
+     "title": null
+    },
+    {
+     "event": "SecondaryEduc",
+     "age_start": 15.0,
+     "age_end": 19.0,
+     "year_start": 1967.2,
+     "year_end": 1971.2,
+     "kind": "education",
+     "pathway": "PSE",
+     "institution": null,
+     "level": null,
+     "title": "CFC"
+    },
+    {
+     "event": "Work_1",
+     "age_start": 17.45,
+     "age_end": 17.96,
+     "year_start": 1969.6,
+     "year_end": 1970.2,
+     "kind": "work",
+     "place_work": "Aargau",
+     "income": 2681
+    },
+    {
+     "event": "Work_2",
+     "age_start": 19.7,
+     "age_end": 20.08,
+     "year_start": 1971.9,
+     "year_end": 1972.3,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 2078
+    },
+    {
+     "event": "Work_3",
+     "age_start": 20.51,
+     "age_end": 21.23,
+     "year_start": 1972.7,
+     "year_end": 1973.4,
+     "kind": "work",
+     "place_work": "Bern",
+     "income": 1712
+    },
+    {
+     "event": "Work_4",
+     "age_start": 22.6,
+     "age_end": 26.32,
+     "year_start": 1974.8,
+     "year_end": 1978.5,
+     "kind": "work",
+     "place_work": "Solothurn",
+     "income": 3340
+    },
+    {
+     "event": "DL",
+     "age_start": 23.51,
+     "age_end": 83.58,
+     "year_start": 1975.7,
+     "year_end": 2035.8,
+     "kind": "licence",
+     "obtained_age": 23.51,
+     "obtained_year": 1975.7
+    },
+    {
+     "event": "Work_5",
+     "age_start": 28.76,
+     "age_end": 32.11,
+     "year_start": 1981.0,
+     "year_end": 1984.3,
+     "kind": "work",
+     "place_work": "Solothurn",
+     "income": 2764
+    }
+   ],
+   "lifespan": 83.6
   }
  ]
 }
